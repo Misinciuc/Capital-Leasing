@@ -1,0 +1,80 @@
+/* 
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+/* Variable */
+@green: #017550;
+@opacity: #24202133;
+@dark: #242021;
+@hvgreen: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0.4) -2.41%,
+  rgba(239, 239, 239, 0.4) 100%
+);
+@osw: "Oswald", sans-serif;
+@rob: "Roboto", sans-serif;
+
+/* Extends */
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 52px;
+  color: white;
+  background-color: @green;
+  border: none;
+  cursor: pointer;
+}
+
+.h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 53px;
+  color: @dark;
+}
+
+.p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: @dark;
+}
+
+.p-b {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: @dark;
+}
+
+.line-btn {
+  content: "";
+  position: absolute;
+  background-color: @dark;
+  transform: rotate(90deg);
+  width: 39px;
+  height: 5px;
+  left: -18px;
+  top: 17px;
+}
+
+.line {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #01734e;
+  position: absolute;
+  top: 40px;
+}
+
+.star {
+  content: "*";
+  position: absolute;
+  color: @green;
+}
