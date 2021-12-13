@@ -36,3 +36,8 @@ var swiperService = new Swiper(".service-swipp", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+document.querySelector('.sideM').onclick = function (){
+  const aside = document.querySelector('.aside');
+  aside.style.display = "block";
+}

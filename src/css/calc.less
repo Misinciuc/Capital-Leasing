@@ -1,0 +1,89 @@
+.calc {
+  .wrapper {
+    .wrapp__items-bg {
+      background-color: white;
+      border: none;
+    }
+  }
+}
+
+.table {
+  .wrapper {
+    .table-1 {
+      &__title:extend(.h2) {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .first-table {
+        margin-bottom: 10%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #c0c0c0;
+        border-collapse: collapse;
+        padding: 5px;
+
+        .table-head {
+          background: linear-gradient(
+            180deg,
+            rgba(1, 117, 80, 0.85) -15%,
+            #017550 119%
+          );
+          color: white;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+          //border: 1px solid #c0c0c0;
+          padding: 5px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 18px;
+          //background: #f0f0f0;
+        }
+        td {
+          text-align: center;
+          border: 1px solid #c0c0c0;
+          padding: 5px;
+          background: #ffffff;
+        }
+      }
+    }
+    .table-2 {
+      &__title:extend(.h2) {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .second-table {
+        margin-bottom: 10%;
+        width: 100%;
+        height: 100%;
+        //border: 1px solid #c0c0c0;
+        border: 1px solid rgba(83, 83, 83, 0.2);
+        border-collapse: collapse;
+        padding: 5px;
+
+        .table-head {
+          background: linear-gradient(
+            180deg,
+            rgba(1, 117, 80, 0.85) -15%,
+            #017550 119%
+          );
+          color: white;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+          //border: 1px solid #c0c0c0;
+          padding: 5px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 18px;
+          //background: #f0f0f0;
+        }
+        td {
+          color: #242021;
+          font-size: 18px;
+
+          text-align: center;
+          border: 1px solid #c0c0c0;
+          padding: 5px;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -31,11 +31,54 @@
     display: block;
   }
 
-  /*   &__img{
+  &__img {
     position: relative;
-  } */
+  }
+
+  &__img::before {
+    content: url(/img/service-page/arrow-anim.png);
+    position: absolute;
+    z-index: 3;
+    left: 52%;
+    bottom: -8px;
+  }
 
   &__img::after {
+    content: url(/img/service-page/arrow-anim.png);
+    position: absolute;
+    z-index: 3;
+    left: 52%;
+    bottom: -16px;
+    transition: 0.5s;
+  }
+
+  &__img::before,
+  &__img::after {
+    animation: slide-bottom 0.8s steps(25, start) infinite alternate-reverse;
+    @keyframes slide-bottom {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      100% {
+        -webkit-transform: translateY(18px);
+        transform: translateY(18px);
+      }
+    }
+  }
+
+  &__arrow:before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+  }
+
+  /* &__img::after {
     content: "";
     background-color: @green;
     width: 50px;
@@ -60,13 +103,16 @@
     transform: translate(-49.3%);
     transform: rotate(45deg);
   }
+
   &__arrow::after {
     transform: rotate(50deg);
   }
+
   &__arrow::before {
     transform: rotate(-50deg);
     margin-left: 7px;
   }
+
   &__arrow-2::after,
   &__arrow-2::before {
     content: "";
@@ -83,10 +129,11 @@
   &__arrow-2::after {
     transform: rotate(50deg);
   }
+
   &__arrow-2::before {
     transform: rotate(-50deg);
     margin-left: 7px;
-  }
+} */
 }
 
 .service-section {
@@ -627,6 +674,74 @@
     }
     .certificate-3:hover .img__hide-3 {
       display: block;
+    }
+  }
+}
+
+/* Choose car Page*/
+
+.choose-car {
+  margin-bottom: 10%;
+  .wrapper {
+    .info {
+      &__title:extend(.h2) {
+        margin-bottom: 24px;
+      }
+
+      &__text:extend(.p) {
+        color: #24202199;
+        max-width: 663px;
+        margin-bottom: 20px;
+      }
+    }
+    .partners {
+      .row-flex();
+      .mark {
+        .col();
+        .size(3);
+        margin-bottom: 20px;
+        max-width: 292px;
+        background: rgba(0, 0, 0, 0.01);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        &__img {
+          display: block;
+          margin: 0 auto;
+          padding-top: 30px;
+          padding-bottom: 50px;
+        }
+
+        &__info {
+          padding: 0px 20px;
+          padding-bottom: 35px;
+          display: flex;
+          justify-content: space-between;
+        }
+        &__link {
+          display: block;
+          position: relative;
+        }
+        &__link::after {
+          content: url(/img/auto/btn.png);
+          position: absolute;
+          left: -45px;
+          top: -10px;
+        }
+      }
+      .mark:hover {
+        background: linear-gradient(
+          180deg,
+          #ffffff -8.92%,
+          #ffffff 3.99%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        box-shadow: 0px 15px 50px 0px #06342626;
+      }
+      .mark:hover .mark__link::after {
+        content: url(/img/auto/btn-hover.png);
+        position: absolute;
+        left: -45px;
+        top: -10px;
+      }
     }
   }
 }
