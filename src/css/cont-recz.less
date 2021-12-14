@@ -232,17 +232,307 @@
       .leasing__img {
         .col();
         .size(6);
+        position: relative;
+      }
+      .leasing__img::before {
+        content: url(/img/a-leasing/img-lines.png);
+        position: absolute;
+        z-index: -1;
+        bottom: -40px;
+        left: -15px;
       }
 
       .leasing__text {
         .col();
-        .size(4);
+        .size(6);
+        margin-top: 4%;
+        position: relative;
         font-family: @rob;
         line-height: 43px;
         font-size: 24px;
         font-weight: 400;
-        &__txt-b {
+        color: #2420219f;
+        .leasing__txt-b {
           font-weight: 500;
+          color: @dark;
+        }
+      }
+      .leasing__text::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: @green;
+        top: 12px;
+        left: -40px;
+      }
+    }
+  }
+}
+
+.notions-section {
+  margin-top: 10%;
+  .wrapper {
+    .items__wrapp {
+      .row-flex();
+
+      .notions {
+        .col();
+        .size(5);
+        &__text {
+          padding-bottom: 38px;
+          position: relative;
+          font-family: @rob;
+          line-height: 29px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #2420219f;
+        }
+        &__text::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: @green;
+          top: 7px;
+          left: -40px;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+        }
+        .notions__text-b {
+          font-weight: 500;
+          color: @dark;
+        }
+
+        .goods {
+          margin-bottom: 38px;
+
+          &__text {
+            //padding-bottom: 20px;
+            position: relative;
+            font-family: @rob;
+            line-height: 29px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #2420219f;
+          }
+
+          &__text::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: @green;
+            top: 7px;
+            left: -40px;
+            box-shadow: 0px 5px 15px 0px #083a2a26;
+          }
+
+          &__subtext {
+            padding-top: 15px;
+            font-family: @rob;
+            line-height: 29px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #2420219f;
+          }
+        }
+      }
+
+      .notions__img {
+        .col();
+        .size(6);
+        .shift-left(1);
+      }
+    }
+  }
+}
+
+.leasing-advantage {
+  margin-top: 8%;
+  .wrapper {
+    .leasing-advantage-title:extend(.h2) {
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .items__wrapp {
+      .row-flex();
+
+      .adv {
+        .col();
+        .size(4);
+        background-image: url(/img/a-leasing/bg-black.png);
+
+        &__number {
+          text-align: center;
+          font-family: @rob;
+          font-weight: 500;
+          font-size: 150px;
+          line-height: 270px;
+        }
+
+        &__text {
+          position: absolute;
+          color: black;
+          z-index: 99;
+        }
+      }
+      .adv:hover {
+        background: url(/img/a-leasing/bg-green.png), #017550;
+      }
+      .adv:hover .adv__number {
+        transition: 0.3s;
+        transform: scale(0.5);
+        margin-left: -250px;
+        margin-top: -60px;
+      }
+    }
+  }
+}
+
+.juridic-section {
+  margin-top: 10%;
+  .wrapper {
+    .juridic-section-text {
+      font-family: @osw;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 43px;
+      color: @green;
+      position: relative;
+      top: -35px;
+      left: 40px;
+    }
+    .container {
+      .row-flex();
+      justify-content: space-between;
+      .left-side {
+        .col();
+        .size(5);
+        .left__text {
+          padding-bottom: 38px;
+          position: relative;
+          font-family: @rob;
+          line-height: 29px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #2420219f;
+        }
+        .left__text-b {
+          font-weight: 500;
+          color: @dark;
+        }
+        .left__text::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: @green;
+          top: 7px;
+          left: -40px;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+        }
+      }
+      .right-side {
+        .col();
+        .size(5);
+        .right__text {
+          padding-bottom: 38px;
+          position: relative;
+          font-family: @rob;
+          line-height: 29px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #2420219f;
+        }
+        .right__text-b {
+          font-weight: 500;
+          color: @dark;
+        }
+        .right__text::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: @green;
+          top: 7px;
+          left: -40px;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+        }
+      }
+    }
+  }
+}
+
+.fizic-section {
+  margin-top: 10%;
+  .wrapper {
+    .fizic-section-text {
+      font-family: @osw;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 43px;
+      color: @green;
+      position: relative;
+      top: -35px;
+      left: 40px;
+    }
+    .container {
+      .row-flex();
+      justify-content: space-between;
+      .left-side {
+        .col();
+        .size(5);
+        .left__text {
+          padding-bottom: 38px;
+          position: relative;
+          font-family: @rob;
+          line-height: 29px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #2420219f;
+        }
+        .left__text-b {
+          font-weight: 500;
+          color: @dark;
+        }
+        .left__text::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: @green;
+          top: 7px;
+          left: -40px;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
+        }
+      }
+      .right-side {
+        .col();
+        .size(5);
+        .right__text {
+          padding-bottom: 38px;
+          position: relative;
+          font-family: @rob;
+          line-height: 29px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #2420219f;
+        }
+        .right__text-b {
+          font-weight: 500;
+          color: @dark;
+        }
+        .right__text::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: @green;
+          top: 7px;
+          left: -40px;
+          box-shadow: 0px 5px 15px 0px #083a2a26;
         }
       }
     }
