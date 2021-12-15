@@ -1,0 +1,785 @@
+.partners-section{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  .wrapper{
+    .partners-section-title:extend(.h2){
+
+    }
+    .items__wrapp{
+      .row-flex();
+
+      .mark{
+        .col();
+        .size(6);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        background: rgba(0, 0, 0, 0.01);
+
+        &__img{
+          padding-left: 57px;
+          padding-top: 45px;
+          padding-bottom: 45px;
+        }
+        &__info{
+          width: 210px;
+          padding-right: 57px;
+        }
+        &__first{
+          font-family: @rob;
+          font-size: 16px;
+          line-height: 29px;
+          color:rgba(36, 32, 33, 0.5);
+        }
+        &__second{
+          font-family: @rob;
+          font-size: 16px;
+          line-height: 29px;
+          color: rgba(36, 32, 33, 1);
+        }
+        &__adress{
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__phone{
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__web{
+          display: flex;
+          justify-content: space-between;
+        }
+      
+      }
+    }
+  }
+}
+
+.table{
+  .wrapper{
+    .table-1{
+      .table-1__title{
+        text-transform: initial;
+        margin-bottom: 4%;
+      }
+      .first-table{
+        .table-head-2{
+          font-family: @rob;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          padding: 15px 0px;
+        }
+        .td{
+          font-family: @rob;
+          font-size: 18px;
+          line-height: 21px;
+          color: rgba(36, 32, 33, 0.6);
+          padding: 15px 0px;
+        }
+      }
+    }
+  }
+}
+
+/* conditions page */
+
+.tab-section{
+  margin-top: 5%;
+  .wrapper{
+
+    .tabs{
+
+      .tabs__2{
+        display: none;
+      }
+
+      &__head{
+        position: relative;
+        display: flex;
+      }
+      &__head::before{
+        content: "Nr.";
+        border-left: 1px solid rgba(183, 206, 199, 1);
+        border-top: 1px solid rgba(183, 206, 199, 1);
+        padding: 32px 7px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+
+      &__link{
+        display: block;
+        width: 50%;
+        text-align: center;
+        border-top: 1px solid #B7CEC7;
+        border-right: 1px solid #B7CEC7;
+        border-left: 1px solid #B7CEC7;
+        padding: 28px 0px;
+        text-decoration: none;
+        color: rgba(183, 206, 199, 1);
+      }
+
+      &__link-1{
+        font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        color:rgba(36, 32, 33, 1);
+        position: relative;
+      }
+      &__link-active{
+        font-size: 24px;
+        line-height: 28px;
+        color:rgba(36, 32, 33, 1);
+      }
+
+      &__link-1::before{
+        content: "";
+        position: absolute;
+        background-color: @green;
+        width: 106%;
+        height: 5px;
+        top: 0px;
+        left: -35px;
+      }
+
+      &__line{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B7CEC7;
+        height: 126px;
+      }
+
+      &__line-b{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B7CEC7;
+        height: 126px;
+      }
+
+      &__line-b::before{
+        content: "A.";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 9.5px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        font-family: @rob;
+      }
+
+      &__line:nth-child(odd){
+        background: rgba(183, 206, 199, 0.1);
+      }
+
+      &__line:nth-child(1)::before{
+        content: "01";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(2)::before{
+        content: "02";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(3)::before{
+        content: "03";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(4)::before{
+        content: "04";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(5)::before{
+        content: "05";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(6)::before{
+        content: "06";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(7)::before{
+        content: "07";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(8)::before{
+        content: "08";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(9)::before{
+        content: "09";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(10)::before{
+        content: "10";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(11)::before{
+        content: "11";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(12)::before{
+        content: "12";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(13)::before{
+        content: "13";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(14)::before{
+        content: "14";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+
+      &__text{
+        max-width: 658px;
+        padding-right: 20px;
+      }
+      &__text-first{
+        margin-right: auto;
+        padding-left: 20px;
+      }
+
+      &__text-b{
+        font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .tabs__important{
+      margin-top: 5%;
+      margin-bottom: 8%;
+      .important{
+        font-family: @rob;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+      .important-star{
+        position: relative;
+        font-family: @rob;
+        font-weight: 400;
+        max-width: 997px;
+        padding-left: 15%;
+        font-size: 16px;
+        line-height: 29px;
+        color: rgba(36, 32, 33, 1);
+      }
+      .important-star::before{
+        content: "*";
+        position: absolute;
+        color: @green;
+        left: 14%;
+      }
+    }
+  }
+}
+
+.assurance-section{
+  margin-top: 5%;
+  .wrapper{
+    .rca__title:extend(.h2){
+      margin-bottom: 27px;
+      position: relative;
+      max-width: 665px;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 43px;
+    }
+    .rca__title::before{
+      content: "";
+      background-color: #B7CEC7;
+      width: 66px;
+      height: 103px;
+      position: absolute;
+      z-index: -1;
+      left: -5px;
+      top: -15px;
+    }
+
+    .rca{
+      display: flex;
+      justify-content: space-between;
+
+      &__text{
+        font-size: 16px;
+        line-height: 29px;
+        font-family: @rob;
+        color:rgba(36, 32, 33, 0.6);
+      }
+      &__text-1{
+        max-width: 617px;
+      }
+      &__text-2{
+        max-width: 617px;
+      }
+    }
+  }
+}
+
+.accident-section{
+  margin-top: 10%;
+  margin-bottom: 5%;
+  .wrapper{
+    .accident__title:extend(.h2){
+      margin-bottom: 27px;
+      position: relative;
+      max-width: 574px;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 43px;
+    }
+    .accident__title::before{
+      content: "";
+      background-color: #B7CEC7;
+      width: 66px;
+      height: 103px;
+      position: absolute;
+      z-index: -1;
+      left: -5px;
+      top: -15px;
+    }
+    .accident{
+      display: flex;
+      justify-content: space-between;
+
+      &__left{
+        max-width: 615px;
+      }
+
+      .left__text{
+        font-size: 16px;
+        line-height: 29px;
+        font-family: @rob;
+        color:rgba(36, 32, 33, 0.6);
+      }
+      /* .left__text-line{
+        position: relative;
+        padding-left: 20px;
+      } */
+
+     /*  .left__text-line::before{
+        content: "-";
+        position: absolute;
+        left: 0px;
+      } */
+
+      .right__text{
+        font-size: 16px;
+        line-height: 29px;
+        font-family: @rob;
+        color:rgba(36, 32, 33, 0.6);
+      }
+
+      &__right{
+        max-width: 617px;
+      }
+    }
+
+  }
+}
+
+.as-partners{
+  margin-bottom: 8%;
+  .wrapper{
+    .asig__title:extend(.h2){
+     max-width: 445px; 
+    }
+    .asig{
+      margin-top: 5%;
+      .row-flex();
+      align-items: center;
+
+      &__img{
+        .col();
+        .size(4);
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.documents-section{
+  margin-top: 5%;
+  .wrapper{
+
+    .tabs{
+
+      .tabs__2{
+        display: none;
+      }
+
+      &__head{
+        position: relative;
+        display: flex;
+      }
+      &__head::before{
+        content: "Nr.";
+        border-left: 1px solid rgba(183, 206, 199, 1);
+        border-top: 1px solid rgba(183, 206, 199, 1);
+        padding: 32px 7px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+
+      &__link{
+        display: block;
+        width: 50%;
+        text-align: center;
+        border-top: 1px solid #B7CEC7;
+        border-right: 1px solid #B7CEC7;
+        border-left: 1px solid #B7CEC7;
+        padding: 28px 0px;
+        text-decoration: none;
+        color: rgba(183, 206, 199, 1);
+      }
+
+      &__link-1{
+        font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        color:rgba(36, 32, 33, 1);
+        position: relative;
+      }
+      &__link-active{
+        font-size: 24px;
+        line-height: 28px;
+        color:rgba(36, 32, 33, 1);
+      }
+
+      &__link-1::before{
+        content: "";
+        position: absolute;
+        background-color: @green;
+        width: 106%;
+        height: 5px;
+        top: 0px;
+        left: -35px;
+      }
+
+      &__line{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B7CEC7;
+        height: 126px;
+      }
+
+      .item-a{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B7CEC7;
+        height: 126px;
+      }
+
+      &__line-2{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B7CEC7;
+        height: 126px;
+      }
+
+      &__line-2:nth-child(2)::before{
+        content: "01";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line-2:nth-child(3)::before{
+        content: "02";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line-2:nth-child(4)::before{
+        content: "03";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      } &__line-2:nth-child(5)::before{
+        content: "04";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      } &__line-2:nth-child(6)::before{
+        content: "05";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      } &__line-2:nth-child(7)::before{
+        content: "06";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      } &__line-2:nth-child(8)::before{
+        content: "07";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      } &__line-2:nth-child(9)::before{
+        content: "08";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }&__line-2:nth-child(10)::before{
+        content: "B.";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 10px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        font-family: @rob;
+      }&__line-2:nth-child(11)::before{
+        content: "01";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }&__line-2:nth-child(12)::before{
+        content: "02";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }&__line-2:nth-child(13)::before{
+        content: "03";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }&__line-2:nth-child(14)::before{
+        content: "04";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }&__line-2:nth-child(15)::before{
+        content: "05";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+
+      .item-a::before{
+        content: "A.";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 9.5px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        font-family: @rob;
+      }
+
+      &__line:nth-child(odd){
+        background: rgba(183, 206, 199, 0.1);
+      }
+
+      &__line:nth-child(1)::before{
+        content: "01";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(2)::before{
+        content: "02";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(3)::before{
+        content: "03";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(4)::before{
+        content: "04";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(5)::before{
+        content: "05";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(6)::before{
+        content: "06";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(7)::before{
+        content: "07";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(8)::before{
+        content: "08";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(9)::before{
+        content: "09";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(10)::before{
+        content: "10";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(11)::before{
+        content: "11";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(12)::before{
+        content: "12";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(13)::before{
+        content: "13";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+      &__line:nth-child(14)::before{
+        content: "14";
+        border-right: 1px solid rgba(183, 206, 199, 1);
+        padding: 55px 8.5px;
+        font-size: 16px;
+        font-family: @rob;
+      }
+
+      &__text{
+        max-width: 658px;
+        padding-right: 20px;
+      }
+      &__text-first{
+        margin-right: auto;
+        padding-left: 20px;
+      }
+
+      &__text-b{
+        font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .tabs__important{
+      margin-top: 5%;
+      margin-bottom: 8%;
+      .important{
+        font-family: @rob;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+      .important-star{
+        position: relative;
+        font-family: @rob;
+        font-weight: 400;
+        max-width: 997px;
+        padding-left: 15%;
+        font-size: 16px;
+        line-height: 29px;
+        color: rgba(36, 32, 33, 1);
+      }
+      .important-star::before{
+        content: "*";
+        position: absolute;
+        color: @green;
+        left: 14%;
+      }
+    }
+  }
+}
