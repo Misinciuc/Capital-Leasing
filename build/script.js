@@ -1,3 +1,19 @@
+
+
+document.querySelector(".sideM").onclick = function () {
+  const sideMenu = document.querySelector(".sideM");
+  const aside = document.querySelector(".aside");
+  const asideClose = document.querySelector(".aside__close");
+  aside.classList.add("aside-show");
+  sideMenu.classList.add("sideM-hide");
+  asideClose.onclick = () => {
+    sideMenu.classList.remove("sideM-hide");
+    aside.classList.remove("aside-show");
+    sideMenu.style.visibility = "visible";
+  }
+};
+
+
 const tswiper = new Swiper(".swiper", {
   grabCursor: true,
   initialSlide: 4,
@@ -37,10 +53,6 @@ var swiperService = new Swiper(".service-swipp", {
   },
 });
 
-document.querySelector('.sideM').onclick = function (){
-  const aside = document.querySelector('.aside');
-  aside.style.display = "block";
-}
 
 
 /* tabs conditions*/
@@ -69,7 +81,6 @@ for (let i = 0; i < acc.length; i++) {
     this.classList.toggle("accordion-anim");
 
     let panel = this.nextElementSibling;
-    console.log(panel);
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {

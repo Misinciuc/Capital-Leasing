@@ -57,11 +57,11 @@ font-family: 'Roboto', sans-serif;
   content: "";
   position: absolute;
   background-color: @dark;
-  transform: rotate(90deg);
-  width: 39px;
-  height: 5px;
-  left: -18px;
-  top: 17px;
+  width: 5px;
+  height: 39px;
+  left: 0px;
+  top: 0px;
+  transition: 0.5s;
 }
 
 .line {
@@ -77,4 +77,9 @@ font-family: 'Roboto', sans-serif;
   content: "*";
   position: absolute;
   color: @green;
+}
+
+
+&__btn:hover::before {
+  width: 100%;
 }

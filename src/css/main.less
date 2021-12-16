@@ -31,24 +31,17 @@
 
   &__btn:extend(.btn) {
     position: relative;
+    z-index: 2;
     width: 150px;
     height: auto;
   }
 
-  &__btn::before {
-    content: "";
-    position: absolute;
-    background-color: @dark;
-    width: 5px;
-    height: 39px;
-    left: 0px;
-    top: 0px;
-    transition: 0.5s;
+  &__btn::before:extend(.line-btn) {
+    z-index: -1;
   }
-
+  
   &__btn:hover::before {
     width: 100%;
-    z-index: -1;
   }
 }
 
@@ -102,6 +95,11 @@
     top: 50%;
   }
 
+  .sideM-hide{
+    transform: translateX(-200px);
+    transition: 1.5s;
+  }
+
   .sideM::after,
   .sideM::before {
     content: "";
@@ -133,9 +131,24 @@
   .aside {
     display: none;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
+    background: rgba(36, 32, 33, 0.1);
     transition: 0.5s;
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) alternate-reverse;
 
+    @keyframes fade-in-left {
+      0% {
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
     &__list {
       max-width: 285px;
       background-color: rgba(36, 32, 33, 0.1);
@@ -147,6 +160,7 @@
       background-color: rgba(36, 32, 33, 0.1);
       position: absolute;
       left: 100%;
+      cursor: pointer;
     }
     &__close::before,
     &__close::after {
@@ -199,6 +213,24 @@
       color: white;
     }
   }
+  .aside-show{
+    display: block;
+    transition: 0.5s;
+    animation: fade-in-show 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    @keyframes fade-in-show {
+      0% {
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .about {
@@ -216,6 +248,7 @@
     position: relative;
     z-index: 3;
   }
+
   &__img::after {
     content: url(/img/bg-lines.png);
     position: absolute;
@@ -263,17 +296,15 @@
 
   &__btn:extend(.btn) {
     position: relative;
+    z-index: 2;
   }
 
-  &__btn::before {
-    content: "";
-    position: absolute;
-    background-color: @dark;
-    transform: rotate(90deg);
-    width: 39px;
-    height: 5px;
-    left: -18px;
-    top: 17px;
+  &__btn::before:extend(.line-btn) {
+    z-index: -1;
+  }
+
+  &__btn:hover::before {
+    width: 100%;
   }
 }
 
@@ -549,17 +580,15 @@
 
         .form__btn:extend(.btn) {
           position: relative;
+          z-index: 2;
           margin-bottom: 40px;
         }
-        .form__btn::before {
-          content: "";
-          position: absolute;
-          background-color: @dark;
-          transform: rotate(90deg);
-          width: 39px;
-          height: 5px;
-          left: -18px;
-          top: 17px;
+        .form__btn::before:extend(.line-btn) {
+          z-index: -1;
+        }
+
+        .form__btn:hover::before {
+          width: 100%;
         }
 
         .inp {
@@ -851,13 +880,21 @@
 
           .form__submit:extend(.btn) {
             position: relative;
+            z-index: 2;
           }
 
           .form__submit::before:extend(.line-btn) {
             background-color: white;
-            width: 47.5px;
-            top: 21px;
-            left: -21px;
+            height: 47.5px; 
+            z-index: -1;        
+          }
+
+          .form__submit:hover{
+           transition: 0.5s;
+           color: black;
+          }
+          .form__submit:hover::before {
+            width: 100%;
           }
 
           .label__checkbox:extend(.p) {
