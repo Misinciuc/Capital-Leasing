@@ -96,14 +96,47 @@
           position: relative;
         }
 
+        &__numbers {
+          position: relative;
+          cursor: pointer;
+        }
+
+        &__numbers::after {
+          content: "";
+          position: absolute;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 7px solid @dark;
+          transition: 0.3s;
+          top: 5px;
+          right: -25px;
+        }
+
+        &__numbers:hover::after {
+          transform: rotate(-90deg);
+        }
+        &__numbers:hover .drop-content {
+          visibility: visible;
+          transition: 0.3s;
+        }
+
         &__number::before {
           content: url(/img/phone.png);
           position: absolute;
           left: -30px;
         }
+        .number__link {
+          text-decoration: none;
+        }
 
-        &__number-2 {
-          margin-top: 10px;
+        .drop-content {
+          visibility: hidden;
+          position: absolute;
+          top: 20px;
+          padding-top: 3px;
+          border-top: 1px solid @green;
+          transition: 0.3s;
+          color: @dark;
         }
 
         &__language {

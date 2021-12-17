@@ -1,18 +1,32 @@
-
+/* document.querySelector(".info__numbers").onmouseover = function () {
+  const dropContent = document.querySelector(".drop-content");
+  const droparrow = document.querySelector(".info__numbers");
+  dropContent.classList.add("drop-content-show");
+  droparrow.classList.add("info__numbers-anim");
+};
+document.querySelector(".info__numbers").onmouseleave = function () {
+  const dropContent = document.querySelector(".drop-content");
+  const droparrow = document.querySelector(".info__numbers");
+  dropContent.classList.remove("drop-content-show");
+  droparrow.classList.remove("info__numbers-anim");
+}; */
 
 document.querySelector(".sideM").onclick = function () {
   const sideMenu = document.querySelector(".sideM");
+  const sideLine = document.querySelector(".sideM__line");
   const aside = document.querySelector(".aside");
   const asideClose = document.querySelector(".aside__close");
   aside.classList.add("aside-show");
+  sideMenu.classList.remove("sideM-like");
+  sideLine.classList.remove("sideM__line-like");
   sideMenu.classList.add("sideM-hide");
   asideClose.onclick = () => {
+    sideMenu.classList.add("sideM-like");
+    sideLine.classList.add("sideM__line-like");
     sideMenu.classList.remove("sideM-hide");
     aside.classList.remove("aside-show");
-    sideMenu.style.visibility = "visible";
-  }
+  };
 };
-
 
 const tswiper = new Swiper(".swiper", {
   grabCursor: true,
@@ -52,8 +66,6 @@ var swiperService = new Swiper(".service-swipp", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-
 
 /* tabs conditions*/
 
