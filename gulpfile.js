@@ -63,6 +63,7 @@ function watch() {
       server: {
         baseDir: "./build/",
       },
+      online: true,
     });
   }
 

@@ -209,9 +209,11 @@
     <div class="wrapper">
       <div class="current-page">
         <p class="current-page__text">Principala</p>
-        <span class="current-page__spn">Calculator</span>
+        <span class="current-page__spn">Servicii</span>
       </div>
     </div>
+  </section>
+  <section class="main-img-section">
     <div class="current__img">
       <img src="/img/calc/car-main.png" alt="" class="current__pic">
       <span class="current__arrow"></span>
@@ -219,6 +221,69 @@
     </div>
   </section>
   <section class="calc">
+    <div class="wrapper">
+      <div class="wrapp__items">
+        <form class="form">
+          <h2 class="form__title">Calculator</h2>
+          <div class="inputs">
+            <div class="input input-1">
+              <label for="price" class="label label__price">Pret</label>
+              <img src="/img/price-inp.png" alt="" class="price-img">
+              <input type="text" name="Price" id="price" class="input__price">
+            </div>
+            <input type="range" class="inp range__price">
+            <div class="input input-2">
+              <div class="inp-wrapp">
+                <label for="adv" class="label label__advance">Avans</label>
+                <img src="/img/price-inp.png" alt="" class="advance-img">
+                <input type="text" name="Advance" id="adv" class="input__advance">
+              </div>
+              <div class="inp-wrapp-2">
+                <img src="/img/percent-inp.png" alt="" class="percent-img">
+                <input type="text" name="percent" class="input__percent">
+              </div>
+            </div>
+            <input type="range" class="inp range__advance">
+            <div class="input input-3">
+              <label for="period" class="label label__period">Termen</label>
+              <img src="/img/price-inp.png" alt="" class="period-img">
+              <input type="text" name="Date" id="period" class="input__period" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
+              <span class="span__period">luni</span>
+            </div>
+            <input type="range" class="inp range__period">
+          </div>
+        </form>
+        <div class="outputs">
+          <div class="output output-1">
+            <p class="output__text">
+              Rata de leasing lunară de la:
+            </p>
+            <p class="output__text output__text-green">
+              79.23 EUR
+            </p>
+          </div>
+          <div class="output output-2">
+            <p class="output__text output__text-3">
+              Rata dobânzii: <span class="output__text-b">8.00%</span>
+            </p>
+            <p class="output__text output__text-4">
+              DAE: <span class="output__text-b">13.73%</span>
+            </p>
+            <p class="output__text output__text-5">
+              Avans: <span class="output__text-b">3660.00 EUR</span>
+            </p>
+          </div>
+          <div class="output output-3">
+            <p class="output__text output__text-6">
+              Termen: <span class="output__text-b">22 luni</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="calc">
     <div class="wrapper">
       <div class="wrapp__items wrapp__items-bg">
         <form class="form">
@@ -272,7 +337,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="table">
     <div class="wrapper">
       <div class="table-1">
@@ -296,7 +361,7 @@
           </tbody>
         </table>
       </div>
-      <div class="table-2">
+      <!-- <div class="table-2">
         <h2 class="table-2__title">Grafic de plăți lunare</h2>
         <table class="second-table">
           <thead>
@@ -472,6 +537,216 @@
             </tr>
           </tbody>
         </table>
+      </div> -->
+      <!-- <div class="table-1">
+        <h2 class="table-1__title">Prima Rata</h2>
+        <table class="first-table">
+          <thead>
+            <tr>
+              <th class="table-head">Aportul inițial </th>
+              <th class="table-head">CASCO (primul an)</th>
+              <th class="table-head table-head-2">Dobînda (unică)</th>
+              <th class="table-head table-head-2">Total spre plată</th>
+            <tr class="table-tr-mob">
+              <td class="table-td">3 660.00</td>
+              <td class="table-td">240.00</td>
+            </tr>
+            <tr class="table-tr-mob">
+              <th class="table-head">Dobînda (unică)</th>
+              <th class="table-head">Total spre plată</th>
+            </tr>
+            <tr class="table-tr-mob">
+              <td class="table-td">150.00</td>
+              <td class="table-td">4 050.00</td>
+            </tr>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-td table-td-2">3 660.00</td>
+              <td class="table-td table-td-2">240.00</td>
+              <td class="table-td table-td-2">150.00</td>
+              <td class="table-td table-td-2">4 050.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+      <div class="table-2">
+        <h2 class="table-2__title">Grafic de plăți lunare</h2>
+        <table class="second-table">
+          <thead>
+            <tr>
+              <th class="table-head first-line">Rata</th>
+              <th class="table-head">Valoarea de răscumpărare</th>
+              <th class="table-head">Principal</th>
+              <th class="table-head table-head-2">Dobânda</th>
+              <th class="table-head table-head-2">Rata de leasing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="first-line">01</td>
+              <td>2 340.00</td>
+              <td>63.63</td>
+              <td>63.63</td>
+              <td>63.63</td>
+            </tr>
+            <tr>
+              <td class="first-line">02</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">03</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">04</td>
+              <td>2 340.00</td>
+              <td>64.91</td>
+              <td>64.91</td>
+              <td>64.91</td>
+            </tr>
+            <tr>
+              <td class="first-line">05</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">06</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">07</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">08</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">09</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">10</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">11</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">12</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">13</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">14</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">15</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">16</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">17</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">18</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">19</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">20</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">21</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">22</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="first-line"></td>
+              <td>7 000.00</td>
+              <td>636.55</td>
+              <td>10 636.55</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -493,7 +768,6 @@
             <label for="contact" class="label label__phone">Număr de contact</label>
             <input type="text" id="contact" name="Phone Number" class="input input__phone" placeholder="065243678">
           </div>
-          <button type="submit" class="form__submit">Trimite</button>
         </div>
         <div class="coments">
           <div class="input-wrapp">
@@ -512,6 +786,7 @@
             </div>
           </div>
         </div>
+        <button type="submit" class="form__submit">Trimite</button>
       </form>
     </div>
   </section>
@@ -522,7 +797,7 @@
           <p class="block__title">
             Informatii
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-1">
             <li class="block__item">
               <a href="asurance.html" class="block__link">Asigurare</a>
             </li>
@@ -544,7 +819,7 @@
           <p class="block__title">
             Util
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-2">
             <li class="block__item">
               <a href="partners.html" class="block__link">Parteneri</a>
             </li>
@@ -566,7 +841,7 @@
           <p class="block__title">
             Despre Capital Leasing
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-3">
             <li class="block__item">
               <a href="about-leasing.html" class="block__link">Despre leasign
               </a>
@@ -589,7 +864,7 @@
           <p class="block__title">
             Contacte
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-4">
             <li class="block__item">
               <a href="tel:373 22 508 358" class="block__link">+373 22 508 358</a>
             </li>

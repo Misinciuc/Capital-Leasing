@@ -209,9 +209,11 @@
     <div class="wrapper">
       <div class="current-page">
         <p class="current-page__text">Principala</p>
-        <span class="current-page__spn">Rechizite bancare</span>
+        <span class="current-page__spn">Servicii</span>
       </div>
     </div>
+  </section>
+  <section class="main-img-section">
     <div class="current__img">
       <img src="/img/recz/car-recz.png" alt="" class="current__pic">
       <span class="current__arrow"></span>
@@ -271,8 +273,46 @@
     </div>
 
   </section>
-
-
+  <section class="contact">
+    <div class="wrapper">
+      <p class="contact__intro">Contactați-ne</p>
+      <h2 class="contact__title">Lasa un mesaj</h2>
+      <form class="form">
+        <div class="fields">
+          <div class="input-wrapp input-wrapp-1">
+            <label for="name" class="label label__name">Nume,Prenume</label>
+            <input type="text" id="name" name="Name" class="input input__name" placeholder="Lupu Andrei">
+          </div>
+          <div class="input-wrapp">
+            <label for="name" class="label label__email">Email</label>
+            <input type="text" id="email" name="Email" class="input input__email" placeholder="andrei@gmail.com">
+          </div>
+          <div class="input-wrapp input-wrapp-3">
+            <label for="contact" class="label label__phone">Număr de contact</label>
+            <input type="text" id="contact" name="Phone Number" class="input input__phone" placeholder="065243678">
+          </div>
+        </div>
+        <div class="coments">
+          <div class="input-wrapp">
+            <label for="message" class="label label__message">Comentarii</label>
+            <textarea name="Coments" id="message" cols="30" rows="10" class="input__textarea"></textarea>
+          </div>
+          <div class="form__checkbox">
+            <div class="checkbox-1">
+              <input type="checkbox" class="input__checkbox" id="policy">
+              <label for="policy" class="label__checkbox">Sunt de acord cu Politica de confidențialitate</label>
+            </div>
+            <div class="checkbox-2">
+              <input type="checkbox" class="input__checkbox" id="pers-date">
+              <label for="pers-date" class="label__checkbox">Permit prelucrarea datelor personale de Capital
+                Leasing</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="form__submit">Trimite</button>
+      </form>
+    </div>
+  </section>
   <footer class="footer">
     <div class="wrapper">
       <div class="items__wrapp">
@@ -280,7 +320,7 @@
           <p class="block__title">
             Informatii
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-1">
             <li class="block__item">
               <a href="asurance.html" class="block__link">Asigurare</a>
             </li>
@@ -302,7 +342,7 @@
           <p class="block__title">
             Util
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-2">
             <li class="block__item">
               <a href="partners.html" class="block__link">Parteneri</a>
             </li>
@@ -324,7 +364,7 @@
           <p class="block__title">
             Despre Capital Leasing
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-3">
             <li class="block__item">
               <a href="about-leasing.html" class="block__link">Despre leasign
               </a>
@@ -347,7 +387,7 @@
           <p class="block__title">
             Contacte
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-4">
             <li class="block__item">
               <a href="tel:373 22 508 358" class="block__link">+373 22 508 358</a>
             </li>

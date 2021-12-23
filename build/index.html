@@ -99,7 +99,7 @@
       <div class="wrapper">
         <div class="info">
           <div class="info__logo">
-            <a href="index.html"></a><img src="/img/logo.png" alt="logo">
+            <a href="index.html"><img src="/img/logo.png" alt="logo"></a>
           </div>
           <div class="info__cont">
             <p class="info__currency">20.28 mdl</p>
@@ -220,23 +220,32 @@
           <button class="intro__btn">Detalii</button>
         </div>
         <div class="main__img">
-          <img src="/img/main-section-car.png" alt="mazda">
+          <img src="/img/main-section-img.png" alt="mazda">
         </div>
       </div>
       <div class="wrapp-advantage">
         <div class="advantage">
+          <div class="advantage__img">
+            <img src="/img/advantage-icon.png" alt="">
+          </div>
           <p class="advantage__text advantage__text-width">
             <span class="advantage__text-green">25 ani</span>
             experienta pe piata
           </p>
         </div>
         <div class="advantage advantage-padding">
+          <div class="advantage__img">
+            <img src="/img/advantage-icon.png" alt="">
+          </div>
           <p class="advantage__text advantage__text-width">
             <span class="advantage__text-green">1500 proiecte</span>
             finalizate cu succes
           </p>
         </div>
         <div class="advantage">
+          <div class="advantage__img">
+            <img src="/img/advantage-icon.png" alt="">
+          </div>
           <p class="advantage__text advantage__text-width">
             <span class="advantage__text-green">20 angajati</span>
             experti in domeniu
@@ -272,9 +281,7 @@
           <div class="about__bg">
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
   <section class="recomendation">
@@ -288,23 +295,32 @@
         </h2>
         <div class="reasons">
           <div class="reason">
+            <div class="reason__img">
+              <img src="img/security.png" alt="">
+            </div>
             <p class="reason__txt reason__1">Siguranta</p>
           </div>
           <div class="reason">
+            <div class="reason__img">
+              <img src="/img/profits.png" alt="">
+            </div>
             <p class="reason__txt reason__2">Profitabil</p>
           </div>
           <div class="reason">
+            <div class="reason__img">
+              <img src="/img/like.png" alt="">
+            </div>
             <p class="reason__txt reason__3">Comod</p>
           </div>
           <div class="reason">
+            <div class="reason__img">
+              <img src="/img/fast.png" alt="">
+            </div>
             <p class="reason__txt reason__4">Rapid</p>
           </div>
         </div>
         <div class="why__img">
           <img src="/img/car-recomend.png" alt="">
-        </div>
-        <div>
-          <img src="/img/car-f.png" alt="">
         </div>
       </div>
     </div>
@@ -339,7 +355,7 @@
           </div>
         </div>
         <div class="service">
-          <div class="service__img">
+          <div class="service__img service__img-build">
             <img src="/img/building.png" alt="" class="service__picsss">
           </div>
           <div class="service__info">
@@ -363,17 +379,25 @@
           <div class="inputs">
             <div class="input input-1">
               <label for="price" class="label label__price">Pret</label>
+              <img src="/img/price-inp.png" alt="" class="price-img">
               <input type="text" name="Price" id="price" class="input__price">
             </div>
             <input type="range" class="inp range__price">
             <div class="input input-2">
-              <label for="adv" class="label label__advance">Avans</label>
-              <input type="text" name="Advance" id="adv" class="input__advance">
-              <input type="text" name="percent" class="input__percent">
+              <div class="inp-wrapp">
+                <label for="adv" class="label label__advance">Avans</label>
+                <img src="/img/price-inp.png" alt="" class="advance-img">
+                <input type="text" name="Advance" id="adv" class="input__advance">
+              </div>
+              <div class="inp-wrapp-2">
+                <img src="/img/percent-inp.png" alt="" class="percent-img">
+                <input type="text" name="percent" class="input__percent">
+              </div>
             </div>
             <input type="range" class="inp range__advance">
             <div class="input input-3">
               <label for="period" class="label label__period">Termen</label>
+              <img src="/img/price-inp.png" alt="" class="period-img">
               <input type="text" name="Date" id="period" class="input__period" onfocus="(this.type='date')"
                 onblur="(this.type='text')">
               <span class="span__period">luni</span>
@@ -407,11 +431,12 @@
               Termen: <span class="output__text-b">22 luni</span>
             </p>
           </div>
+          <button class="output__btn" type="submit">Vezi tot</button>
         </div>
       </div>
     </div>
   </section>
-  <!-- <section class="testim">
+  <!--   <section class="testim">
     <p class="testim__intro">
       Recenzii
     </p>
@@ -519,7 +544,7 @@
         Fusce nisi, id pellentesque
         tortor ullamcorper feugiat massa et. Massa nec, vivamus sed sem pretium.
       </p>
-      <div class="swiper mySwiper">
+      <div class="swiper my-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="part part-1">
@@ -558,55 +583,81 @@
           </div>
           <div class="swiper-slide">
             <div class="part part-1">
+              <img src="/img/renault.png" alt="" class="part-img">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="part part-1">
+              <img src="/img/nissan.png" alt="" class="part-img">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="part part-1">
+              <img src="/img/ford.png" alt="" class="part-img">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="part part-1">
+              <img src="/img/ford.png" alt="" class="part-img">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="part part-1">
               <img src="/img/ford.png" alt="" class="part-img">
             </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
   <section class="contact-section">
     <div class="wrapper">
-      <div class="items__wrapp">
-        <form class="form">
-          <p class="form__intro">Contactați-ne</p>
-          <h2 class="form__title">Lasa un mesaj</h2>
-          <div class="input-wrapp input-wrapp-1">
-            <label for="name" class="label label__name">Nume,Prenume</label>
-            <input type="text" id="name" name="Name" class="input input__name" placeholder="Lupu Andrei">
-          </div>
-          <div class="input-wrapp">
-            <label for="name" class="label label__email">Email</label>
-            <input type="text" id="email" name="Email" class="input input__email" placeholder="andrei@gmail.com">
-          </div>
-          <div class="input-wrapp input-wrapp-3">
-            <label for="contact" class="label label__phone">Număr de contact</label>
-            <input type="text" id="contact" name="Phone Number" class="input input__phone" placeholder="065243678">
-          </div>
-          <div class="input-wrapp">
-            <label for="message" class="label label__message">Comentarii</label>
-            <textarea name="Coments" id="message" cols="30" rows="10" class="input__textarea"></textarea>
-          </div>
-          <div class="form__bottom">
-            <button type="submit" class="form__submit">Trimite</button>
-            <div class="form__checkbox">
-              <div class="checkbox-1">
-                <input type="checkbox" class="input__checkbox" id="policy">
-                <label for="policy" class="label__checkbox">Sunt de acord cu Politica de confidențialitate</label>
-              </div>
-              <div class="checkbox-2">
-                <input type="checkbox" class="input__checkbox" id="pers-date">
-                <label for="pers-date" class="label__checkbox">Permit prelucrarea datelor personale de Capital
-                  Leasing</label>
+      <div class="container-contacts">
+        <div class="items__wrapp">
+          <form class="form">
+            <p class="form__intro">Contactați-ne</p>
+            <h2 class="form__title">Lasa un mesaj</h2>
+            <div class="input-wrapp input-wrapp-1">
+              <label for="name" class="label label__name">Nume,Prenume</label>
+              <input type="text" id="name" name="Name" class="input input__name" placeholder="Lupu Andrei">
+            </div>
+            <div class="input-wrapp">
+              <label for="name" class="label label__email">Email</label>
+              <input type="text" id="email" name="Email" class="input input__email" placeholder="andrei@gmail.com">
+            </div>
+            <div class="input-wrapp input-wrapp-3">
+              <label for="contact" class="label label__phone">Număr de contact</label>
+              <input type="text" id="contact" name="Phone Number" class="input input__phone" placeholder="065243678">
+            </div>
+            <div class="input-wrapp">
+              <label for="message" class="label label__message">Comentarii</label>
+              <textarea name="Coments" id="message" cols="30" rows="10" class="input__textarea"></textarea>
+            </div>
+            <div class="form__bottom">
+              <button type="submit" class="form__submit">Trimite</button>
+              <div class="form__checkbox">
+                <div class="checkbox-1">
+                  <input type="checkbox" class="input__checkbox" id="policy">
+                  <label for="policy" class="label__checkbox">Sunt de acord cu Politica de confidențialitate</label>
+                </div>
+                <div class="checkbox-2">
+                  <input type="checkbox" class="input__checkbox" id="pers-date">
+                  <label for="pers-date" class="label__checkbox">Permit prelucrarea datelor personale de Capital
+                    Leasing</label>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div class="map">
+          <iframe class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73588.6549757534!2d28.782997818986303!3d47.024050370635415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d937ebbb855%3A0x24ce7db26c720acb!2sStrada%20Calea%20Ie%C5%9Filor%2010%2C%20Chi%C8%99in%C4%83u%202069%2C%20Moldova!5e0!3m2!1sro!2s!4v1640077770311!5m2!1sro!2s"
+            width="100%" height="865" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
-      <div class="map">
-        <img src="/img/map.png" alt="" class="map__img">
-      </div>
+
     </div>
   </section>
   <footer class="footer">
@@ -616,7 +667,7 @@
           <p class="block__title">
             Informatii
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-1">
             <li class="block__item">
               <a href="asurance.html" class="block__link">Asigurare</a>
             </li>
@@ -638,7 +689,7 @@
           <p class="block__title">
             Util
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-2">
             <li class="block__item">
               <a href="partners.html" class="block__link">Parteneri</a>
             </li>
@@ -660,7 +711,7 @@
           <p class="block__title">
             Despre Capital Leasing
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-3">
             <li class="block__item">
               <a href="about-leasing.html" class="block__link">Despre leasign
               </a>
@@ -683,7 +734,7 @@
           <p class="block__title">
             Contacte
           </p>
-          <ul class="block__list">
+          <ul class="block__list block__list-4">
             <li class="block__item">
               <a href="tel:373 22 508 358" class="block__link">+373 22 508 358</a>
             </li>

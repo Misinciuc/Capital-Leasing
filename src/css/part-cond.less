@@ -1,16 +1,16 @@
-.partners-section{
+.partners-section {
   margin-top: 5%;
   margin-bottom: 5%;
-  .wrapper{
-    .partners-section-title:extend(.h2){
-
+  .wrapper {
+    .partners-section-title:extend(.h2) {
     }
-    .items__wrapp{
+    .items__wrapp {
       .row-flex();
 
-      .mark{
+      .mark {
         .col();
         .size(6);
+        .size-md(12);
         margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
@@ -18,63 +18,71 @@
         border: 1px solid rgba(0, 0, 0, 0.05);
         background: rgba(0, 0, 0, 0.01);
 
-        &__img{
+        &__img {
           padding-left: 57px;
           padding-top: 45px;
           padding-bottom: 45px;
+          .sm-block({
+            padding-left: 0px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+          });
+          .xs(transform, scale(0.5));
         }
-        &__info{
+        &__info {
           width: 210px;
           padding-right: 57px;
+          .sm-block({
+            padding-right: 0px;
+          });
         }
-        &__first{
+        &__first {
           font-family: @rob;
           font-size: 16px;
           line-height: 29px;
-          color:rgba(36, 32, 33, 0.5);
+          color: rgba(36, 32, 33, 0.5);
         }
-        &__second{
+        &__second {
           font-family: @rob;
           font-size: 16px;
           line-height: 29px;
           color: rgba(36, 32, 33, 1);
         }
-        &__adress{
+        &__adress {
           display: flex;
           justify-content: space-between;
         }
 
-        &__phone{
+        &__phone {
           display: flex;
           justify-content: space-between;
         }
 
-        &__web{
+        &__web {
           display: flex;
           justify-content: space-between;
         }
-      
       }
     }
   }
 }
 
-.table{
-  .wrapper{
-    .table-1{
-      .table-1__title{
+.table {
+  .wrapper {
+    .table-1 {
+      .table-1__title {
         text-transform: initial;
         margin-bottom: 4%;
       }
-      .first-table{
-        .table-head-2{
+      .first-table {
+        .table-head-2 {
           font-family: @rob;
           font-weight: 500;
           font-size: 18px;
           line-height: 21px;
           padding: 15px 0px;
         }
-        .td{
+        .td {
           font-family: @rob;
           font-size: 18px;
           line-height: 21px;
@@ -88,21 +96,19 @@
 
 /* conditions page */
 
-.tab-section{
+.tab-section {
   margin-top: 5%;
-  .wrapper{
-
-    .tabs{
-
-      .tabs__2{
+  .wrapper {
+    .tabs {
+      .tabs__2 {
         display: none;
       }
 
-      &__head{
+      &__head {
         position: relative;
         display: flex;
       }
-      &__head::before{
+      &__head::before {
         content: "Nr.";
         border-left: 1px solid rgba(183, 206, 199, 1);
         border-top: 1px solid rgba(183, 206, 199, 1);
@@ -111,32 +117,32 @@
         font-family: @rob;
       }
 
-      &__link{
+      &__link {
         display: block;
         width: 50%;
         text-align: center;
-        border-top: 1px solid #B7CEC7;
-        border-right: 1px solid #B7CEC7;
-        border-left: 1px solid #B7CEC7;
+        border-top: 1px solid #b7cec7;
+        border-right: 1px solid #b7cec7;
+        border-left: 1px solid #b7cec7;
         padding: 28px 0px;
         text-decoration: none;
         color: rgba(183, 206, 199, 1);
       }
 
-      &__link-1{
+      &__link-1 {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
-        color:rgba(36, 32, 33, 1);
+        color: rgba(36, 32, 33, 1);
         position: relative;
       }
-      &__link-active{
+      &__link-active {
         font-size: 24px;
         line-height: 28px;
-        color:rgba(36, 32, 33, 1);
+        color: rgba(36, 32, 33, 1);
       }
 
-      &__link-1::before{
+      &__link-1::before {
         content: "";
         position: absolute;
         background-color: @green;
@@ -146,25 +152,25 @@
         left: -35px;
       }
 
-      &__line{
+      &__line {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #B7CEC7;
+        border: 1px solid #b7cec7;
         height: 126px;
       }
 
-      &__line-b{
+      &__line-b {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #B7CEC7;
+        border: 1px solid #b7cec7;
         height: 126px;
       }
 
-      &__line-b::before{
+      &__line-b::before {
         content: "A.";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 9.5px;
@@ -174,102 +180,102 @@
         font-family: @rob;
       }
 
-      &__line:nth-child(odd){
+      &__line:nth-child(odd) {
         background: rgba(183, 206, 199, 0.1);
       }
 
-      &__line:nth-child(1)::before{
+      &__line:nth-child(1)::before {
         content: "01";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(2)::before{
+      &__line:nth-child(2)::before {
         content: "02";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(3)::before{
+      &__line:nth-child(3)::before {
         content: "03";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(4)::before{
+      &__line:nth-child(4)::before {
         content: "04";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(5)::before{
+      &__line:nth-child(5)::before {
         content: "05";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(6)::before{
+      &__line:nth-child(6)::before {
         content: "06";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(7)::before{
+      &__line:nth-child(7)::before {
         content: "07";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(8)::before{
+      &__line:nth-child(8)::before {
         content: "08";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(9)::before{
+      &__line:nth-child(9)::before {
         content: "09";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(10)::before{
+      &__line:nth-child(10)::before {
         content: "10";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(11)::before{
+      &__line:nth-child(11)::before {
         content: "11";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(12)::before{
+      &__line:nth-child(12)::before {
         content: "12";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(13)::before{
+      &__line:nth-child(13)::before {
         content: "13";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(14)::before{
+      &__line:nth-child(14)::before {
         content: "14";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
@@ -277,16 +283,16 @@
         font-family: @rob;
       }
 
-      &__text{
+      &__text {
         max-width: 658px;
         padding-right: 20px;
       }
-      &__text-first{
+      &__text-first {
         margin-right: auto;
         padding-left: 20px;
       }
 
-      &__text-b{
+      &__text-b {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
@@ -294,17 +300,17 @@
         font-weight: 700;
       }
     }
-    .tabs__important{
+    .tabs__important {
       margin-top: 5%;
       margin-bottom: 8%;
-      .important{
+      .important {
         font-family: @rob;
         font-size: 16px;
         line-height: 19px;
         font-weight: 500;
         padding-bottom: 10px;
       }
-      .important-star{
+      .important-star {
         position: relative;
         font-family: @rob;
         font-weight: 400;
@@ -314,7 +320,7 @@
         line-height: 29px;
         color: rgba(36, 32, 33, 1);
       }
-      .important-star::before{
+      .important-star::before {
         content: "*";
         position: absolute;
         color: @green;
@@ -324,10 +330,10 @@
   }
 }
 
-.assurance-section{
+.assurance-section {
   margin-top: 5%;
-  .wrapper{
-    .rca__title:extend(.h2){
+  .wrapper {
+    .rca__title:extend(.h2) {
       margin-bottom: 27px;
       position: relative;
       max-width: 665px;
@@ -335,9 +341,9 @@
       font-size: 24px;
       line-height: 43px;
     }
-    .rca__title::before{
+    .rca__title::before {
       content: "";
-      background-color: #B7CEC7;
+      background-color: #b7cec7;
       width: 66px;
       height: 103px;
       position: absolute;
@@ -346,31 +352,31 @@
       top: -15px;
     }
 
-    .rca{
+    .rca {
       display: flex;
       justify-content: space-between;
 
-      &__text{
+      &__text {
         font-size: 16px;
         line-height: 29px;
         font-family: @rob;
-        color:rgba(36, 32, 33, 0.6);
+        color: rgba(36, 32, 33, 0.6);
       }
-      &__text-1{
+      &__text-1 {
         max-width: 617px;
       }
-      &__text-2{
+      &__text-2 {
         max-width: 617px;
       }
     }
   }
 }
 
-.accident-section{
+.accident-section {
   margin-top: 10%;
   margin-bottom: 5%;
-  .wrapper{
-    .accident__title:extend(.h2){
+  .wrapper {
+    .accident__title:extend(.h2) {
       margin-bottom: 27px;
       position: relative;
       max-width: 574px;
@@ -378,9 +384,9 @@
       font-size: 24px;
       line-height: 43px;
     }
-    .accident__title::before{
+    .accident__title::before {
       content: "";
-      background-color: #B7CEC7;
+      background-color: #b7cec7;
       width: 66px;
       height: 103px;
       position: absolute;
@@ -388,58 +394,57 @@
       left: -5px;
       top: -15px;
     }
-    .accident{
+    .accident {
       display: flex;
       justify-content: space-between;
 
-      &__left{
+      &__left {
         max-width: 615px;
       }
 
-      .left__text{
+      .left__text {
         font-size: 16px;
         line-height: 29px;
         font-family: @rob;
-        color:rgba(36, 32, 33, 0.6);
+        color: rgba(36, 32, 33, 0.6);
       }
       /* .left__text-line{
         position: relative;
         padding-left: 20px;
       } */
 
-     /*  .left__text-line::before{
+      /*  .left__text-line::before{
         content: "-";
         position: absolute;
         left: 0px;
       } */
 
-      .right__text{
+      .right__text {
         font-size: 16px;
         line-height: 29px;
         font-family: @rob;
-        color:rgba(36, 32, 33, 0.6);
+        color: rgba(36, 32, 33, 0.6);
       }
 
-      &__right{
+      &__right {
         max-width: 617px;
       }
     }
-
   }
 }
 
-.as-partners{
+.as-partners {
   margin-bottom: 8%;
-  .wrapper{
-    .asig__title:extend(.h2){
-     max-width: 445px; 
+  .wrapper {
+    .asig__title:extend(.h2) {
+      max-width: 445px;
     }
-    .asig{
+    .asig {
       margin-top: 5%;
       .row-flex();
       align-items: center;
 
-      &__img{
+      &__img {
         .col();
         .size(4);
         text-align: center;
@@ -449,21 +454,19 @@
   }
 }
 
-.documents-section{
+.documents-section {
   margin-top: 5%;
-  .wrapper{
-
-    .tabs{
-
-      .tabs__2{
+  .wrapper {
+    .tabs {
+      .tabs__2 {
         display: none;
       }
 
-      &__head{
+      &__head {
         position: relative;
         display: flex;
       }
-      &__head::before{
+      &__head::before {
         content: "Nr.";
         border-left: 1px solid rgba(183, 206, 199, 1);
         border-top: 1px solid rgba(183, 206, 199, 1);
@@ -472,32 +475,32 @@
         font-family: @rob;
       }
 
-      &__link{
+      &__link {
         display: block;
         width: 50%;
         text-align: center;
-        border-top: 1px solid #B7CEC7;
-        border-right: 1px solid #B7CEC7;
-        border-left: 1px solid #B7CEC7;
+        border-top: 1px solid #b7cec7;
+        border-right: 1px solid #b7cec7;
+        border-left: 1px solid #b7cec7;
         padding: 28px 0px;
         text-decoration: none;
         color: rgba(183, 206, 199, 1);
       }
 
-      &__link-1{
+      &__link-1 {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
-        color:rgba(36, 32, 33, 1);
+        color: rgba(36, 32, 33, 1);
         position: relative;
       }
-      &__link-active{
+      &__link-active {
         font-size: 24px;
         line-height: 28px;
-        color:rgba(36, 32, 33, 1);
+        color: rgba(36, 32, 33, 1);
       }
 
-      &__link-1::before{
+      &__link-1::before {
         content: "";
         position: absolute;
         background-color: @green;
@@ -507,84 +510,90 @@
         left: -35px;
       }
 
-      &__line{
+      &__line {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #B7CEC7;
+        border: 1px solid #b7cec7;
         height: 126px;
       }
 
-      .item-a{
+      .item-a {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #B7CEC7;
+        border: 1px solid #b7cec7;
         height: 126px;
       }
 
-      &__line-2{
+      &__line-2 {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #B7CEC7;
+        border: 1px solid #b7cec7;
         height: 126px;
       }
 
-      &__line-2:nth-child(2)::before{
+      &__line-2:nth-child(2)::before {
         content: "01";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line-2:nth-child(3)::before{
+      &__line-2:nth-child(3)::before {
         content: "02";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line-2:nth-child(4)::before{
+      &__line-2:nth-child(4)::before {
         content: "03";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      } &__line-2:nth-child(5)::before{
+      }
+      &__line-2:nth-child(5)::before {
         content: "04";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      } &__line-2:nth-child(6)::before{
+      }
+      &__line-2:nth-child(6)::before {
         content: "05";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      } &__line-2:nth-child(7)::before{
+      }
+      &__line-2:nth-child(7)::before {
         content: "06";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      } &__line-2:nth-child(8)::before{
+      }
+      &__line-2:nth-child(8)::before {
         content: "07";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      } &__line-2:nth-child(9)::before{
+      }
+      &__line-2:nth-child(9)::before {
         content: "08";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      }&__line-2:nth-child(10)::before{
+      }
+      &__line-2:nth-child(10)::before {
         content: "B.";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 10px;
@@ -592,31 +601,36 @@
         font-weight: 700;
         line-height: 19px;
         font-family: @rob;
-      }&__line-2:nth-child(11)::before{
+      }
+      &__line-2:nth-child(11)::before {
         content: "01";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      }&__line-2:nth-child(12)::before{
+      }
+      &__line-2:nth-child(12)::before {
         content: "02";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      }&__line-2:nth-child(13)::before{
+      }
+      &__line-2:nth-child(13)::before {
         content: "03";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      }&__line-2:nth-child(14)::before{
+      }
+      &__line-2:nth-child(14)::before {
         content: "04";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
-      }&__line-2:nth-child(15)::before{
+      }
+      &__line-2:nth-child(15)::before {
         content: "05";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
@@ -624,7 +638,7 @@
         font-family: @rob;
       }
 
-      .item-a::before{
+      .item-a::before {
         content: "A.";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 9.5px;
@@ -634,102 +648,102 @@
         font-family: @rob;
       }
 
-      &__line:nth-child(odd){
+      &__line:nth-child(odd) {
         background: rgba(183, 206, 199, 0.1);
       }
 
-      &__line:nth-child(1)::before{
+      &__line:nth-child(1)::before {
         content: "01";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(2)::before{
+      &__line:nth-child(2)::before {
         content: "02";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(3)::before{
+      &__line:nth-child(3)::before {
         content: "03";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(4)::before{
+      &__line:nth-child(4)::before {
         content: "04";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(5)::before{
+      &__line:nth-child(5)::before {
         content: "05";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(6)::before{
+      &__line:nth-child(6)::before {
         content: "06";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(7)::before{
+      &__line:nth-child(7)::before {
         content: "07";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(8)::before{
+      &__line:nth-child(8)::before {
         content: "08";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(9)::before{
+      &__line:nth-child(9)::before {
         content: "09";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(10)::before{
+      &__line:nth-child(10)::before {
         content: "10";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(11)::before{
+      &__line:nth-child(11)::before {
         content: "11";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(12)::before{
+      &__line:nth-child(12)::before {
         content: "12";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(13)::before{
+      &__line:nth-child(13)::before {
         content: "13";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
       }
-      &__line:nth-child(14)::before{
+      &__line:nth-child(14)::before {
         content: "14";
         border-right: 1px solid rgba(183, 206, 199, 1);
         padding: 55px 8.5px;
@@ -737,16 +751,16 @@
         font-family: @rob;
       }
 
-      &__text{
+      &__text {
         max-width: 658px;
         padding-right: 20px;
       }
-      &__text-first{
+      &__text-first {
         margin-right: auto;
         padding-left: 20px;
       }
 
-      &__text-b{
+      &__text-b {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
@@ -754,17 +768,17 @@
         font-weight: 700;
       }
     }
-    .tabs__important{
+    .tabs__important {
       margin-top: 5%;
       margin-bottom: 8%;
-      .important{
+      .important {
         font-family: @rob;
         font-size: 16px;
         line-height: 19px;
         font-weight: 500;
         padding-bottom: 10px;
       }
-      .important-star{
+      .important-star {
         position: relative;
         font-family: @rob;
         font-weight: 400;
@@ -774,7 +788,7 @@
         line-height: 29px;
         color: rgba(36, 32, 33, 1);
       }
-      .important-star::before{
+      .important-star::before {
         content: "*";
         position: absolute;
         color: @green;
