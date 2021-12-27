@@ -26,8 +26,9 @@
             padding-left: 0px;
             padding-top: 25px;
             padding-bottom: 25px;
+            //margin-left: -30px;
           });
-          .xs(transform, scale(0.5));
+          .xs(width, 90px);
         }
         &__info {
           width: 210px;
@@ -73,6 +74,9 @@
       .table-1__title {
         text-transform: initial;
         margin-bottom: 4%;
+        .sm-block({
+          max-width: 195px;
+        });
       }
       .first-table {
         .table-head-2 {
@@ -88,13 +92,49 @@
           line-height: 21px;
           color: rgba(36, 32, 33, 0.6);
           padding: 15px 0px;
+          .xs-block({
+            font-size: 16px;
+            padding: 15px 10px;
+          });
+        }
+      }
+      .xs-block({
+        overflow: scroll;
+      });
+    }
+    .table-2 {
+      .table-2__title {
+        text-transform: initial;
+        margin-bottom: 4%;
+        .sm-block({
+          max-width: 195px;
+        });
+      }
+      .second-table {
+        .table-head-2 {
+          font-family: @rob;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          padding: 15px 0px;
+        }
+        .td {
+          font-family: @rob;
+          font-size: 18px;
+          line-height: 21px;
+          color: rgba(36, 32, 33, 0.6);
+          padding: 15px 0px;
+          .xs-block({
+            font-size: 16px;
+            padding: 15px 0px;
+          });
         }
       }
     }
   }
 }
 
-/* conditions page */
+/* CONDITIONS PAGE */
 
 .tab-section {
   margin-top: 5%;
@@ -108,6 +148,11 @@
         position: relative;
         display: flex;
       }
+
+      .tabs__head-line {
+        border-top: 7px solid @green;
+      }
+
       &__head::before {
         content: "Nr.";
         border-left: 1px solid rgba(183, 206, 199, 1);
@@ -130,26 +175,21 @@
       }
 
       &__link-1 {
+        /*   font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        color: rgba(36, 32, 33, 1); */
+        position: relative;
+      }
+      &__link-active {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
         color: rgba(36, 32, 33, 1);
-        position: relative;
-      }
-      &__link-active {
-        font-size: 24px;
-        line-height: 28px;
-        color: rgba(36, 32, 33, 1);
-      }
-
-      &__link-1::before {
-        content: "";
-        position: absolute;
-        background-color: @green;
-        width: 106%;
-        height: 5px;
-        top: 0px;
-        left: -35px;
+        .xs-block({
+        font-size: 18px;
+        line-height: 22px;
+        });
       }
 
       &__line {
@@ -158,7 +198,7 @@
         justify-content: space-between;
         align-items: center;
         border: 1px solid #b7cec7;
-        height: 126px;
+        //height: 126px;
       }
 
       &__line-b {
@@ -197,6 +237,9 @@
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
+        .xs-block({
+          padding: 85px 8.5px;
+        });
       }
       &__line:nth-child(3)::before {
         content: "03";
@@ -218,6 +261,9 @@
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
+        .xs-block({
+          padding: 85px 8.5px;
+        });
       }
       &__line:nth-child(6)::before {
         content: "06";
@@ -225,6 +271,9 @@
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
+        .xs-block({
+          padding: 85px 8.5px;
+        });
       }
       &__line:nth-child(7)::before {
         content: "07";
@@ -232,6 +281,9 @@
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
+        .xs-block({
+          padding: 85px 8.5px;
+        });
       }
       &__line:nth-child(8)::before {
         content: "08";
@@ -286,10 +338,19 @@
       &__text {
         max-width: 658px;
         padding-right: 20px;
+        .xs-block({
+          font-size: 16px;
+          max-width: 120px;
+          padding-right: 0px;
+        });
       }
       &__text-first {
         margin-right: auto;
         padding-left: 20px;
+        .xs-block({
+          padding-left: 10px;
+          max-width: 150px;
+        });
       }
 
       &__text-b {
@@ -330,8 +391,13 @@
   }
 }
 
+/* ASSURANCE PAGE */
+
 .assurance-section {
   margin-top: 5%;
+  .xs-block({
+    margin-top: 40px;
+   });
   .wrapper {
     .rca__title:extend(.h2) {
       margin-bottom: 27px;
@@ -355,7 +421,9 @@
     .rca {
       display: flex;
       justify-content: space-between;
-
+      .sm-block({
+        flex-direction: column;
+      });
       &__text {
         font-size: 16px;
         line-height: 29px;
@@ -364,6 +432,9 @@
       }
       &__text-1 {
         max-width: 617px;
+        .sm-block({
+         margin-bottom: 15px;
+        });
       }
       &__text-2 {
         max-width: 617px;
@@ -397,7 +468,9 @@
     .accident {
       display: flex;
       justify-content: space-between;
-
+      .sm-block({
+        flex-direction: column;
+      });
       &__left {
         max-width: 615px;
       }
@@ -407,13 +480,16 @@
         line-height: 29px;
         font-family: @rob;
         color: rgba(36, 32, 33, 0.6);
+        .xs-block({
+          color: rgba(0, 0, 0, 1);
+        });
       }
-      /* .left__text-line{
+      /* .left__text-line {
         position: relative;
         padding-left: 20px;
-      } */
+      }
 
-      /*  .left__text-line::before{
+      .left__text-line::before {
         content: "-";
         position: absolute;
         left: 0px;
@@ -424,6 +500,18 @@
         line-height: 29px;
         font-family: @rob;
         color: rgba(36, 32, 33, 0.6);
+        .xs-block({
+          color: rgba(0, 0, 0, 1);
+          margin-top: 20px;
+        });
+      }
+
+      .right__text-line {
+        display: inline-block;
+        padding-right: 8px;
+        .xs-block({
+          padding-right: 15px;
+        });
       }
 
       &__right {
@@ -447,12 +535,16 @@
       &__img {
         .col();
         .size(4);
+        .size-sm(6);
+        .size-xs(12);
         text-align: center;
         margin-bottom: 50px;
       }
     }
   }
 }
+
+/*PAGE DOCUMENTS  */
 
 .documents-section {
   margin-top: 5%;
@@ -475,6 +567,10 @@
         font-family: @rob;
       }
 
+      .tabs__head-line {
+        border-top: 7px solid @green;
+      }
+
       &__link {
         display: block;
         width: 50%;
@@ -488,26 +584,27 @@
       }
 
       &__link-1 {
+        /*  font-family: @rob;
+        font-size: 24px;
+        line-height: 28px;
+        color: rgba(36, 32, 33, 1); */
+        position: relative;
+      }
+      /*   &__link-active {
+        font-size: 24px;
+        line-height: 28px;
+        color: rgba(36, 32, 33, 1);
+      } */
+
+      &__link-active {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
         color: rgba(36, 32, 33, 1);
-        position: relative;
-      }
-      &__link-active {
-        font-size: 24px;
-        line-height: 28px;
-        color: rgba(36, 32, 33, 1);
-      }
-
-      &__link-1::before {
-        content: "";
-        position: absolute;
-        background-color: @green;
-        width: 106%;
-        height: 5px;
-        top: 0px;
-        left: -35px;
+        .xs-block({
+        font-size: 18px;
+        line-height: 22px;
+        });
       }
 
       &__line {
@@ -516,7 +613,27 @@
         justify-content: space-between;
         align-items: center;
         border: 1px solid #b7cec7;
-        height: 126px;
+        //height: 126px;
+      }
+
+      /* 
+      &__link-1::before {
+        content: "";
+        position: absolute;
+        background-color: @green;
+        width: 106%;
+        height: 5px;
+        top: 0px;
+        left: -35px;
+      } */
+
+      &__line {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #b7cec7;
+        //height: 126px;
       }
 
       .item-a {
@@ -672,6 +789,9 @@
         padding: 55px 8.5px;
         font-size: 16px;
         font-family: @rob;
+        .sm-block({
+          padding: 100px 8.5px;
+        })
       }
       &__line:nth-child(4)::before {
         content: "04";
@@ -760,12 +880,30 @@
         padding-left: 20px;
       }
 
+      &__text-l{
+        .sm-block({
+          padding-top: 15px;
+          padding-bottom: 15px;
+        });
+      }
+
       &__text-b {
         font-family: @rob;
         font-size: 24px;
         line-height: 28px;
         text-transform: uppercase;
         font-weight: 700;
+
+        .sm-block({
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 19px;
+          letter-spacing: 0em;
+          text-align: left;
+
+        });
       }
     }
     .tabs__important {

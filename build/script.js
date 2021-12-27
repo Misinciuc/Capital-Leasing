@@ -1,19 +1,4 @@
-document.querySelector(".sideM").onclick = function () {
-  const sideMenu = document.querySelector(".sideM");
-  const sideLine = document.querySelector(".sideM__line");
-  const aside = document.querySelector(".aside");
-  const asideClose = document.querySelector(".aside__close");
-  aside.classList.add("aside-show");
-  sideMenu.classList.remove("sideM-like");
-  sideLine.classList.remove("sideM__line-like");
-  sideMenu.classList.add("sideM-hide");
-  asideClose.onclick = () => {
-    sideMenu.classList.add("sideM-like");
-    sideLine.classList.add("sideM__line-like");
-    sideMenu.classList.remove("sideM-hide");
-    aside.classList.remove("aside-show");
-  };
-};
+
 
 /* const tswiper = new Swiper(".swiper", {
   //grabCursor: true,
@@ -115,20 +100,22 @@ var swiperService = new Swiper(".service-swipp", {
 
 /* tabs conditions*/
 
-/* const link2 = document.querySelector('.tabs__link-2').onclick = function () {
-  const tab1 = document.querySelector('.tabs__1');
-  const tab2 = document.querySelector('.tabs__2');
-  tab1.style.display = "none";
-  tab2.style.display = "block";
-}
+const links = document.querySelectorAll(".tabs__link");
+for (let i = 0; i < links.length; i++) {
+  links[0].onclick = function () {
+    links[1].classList.remove("tabs__head-line", "tabs__link-active");
+    links[0].classList.add("tabs__link-active", "tabs__head-line");
+    document.querySelector(".tabs__1").style.display = "block";
+    document.querySelector(".tabs__2").style.display = "none";
+  };
 
-const link1 = document.querySelector('.tabs__link-1').onclick = function () {
-  const tab1 = document.querySelector('.tabs__1');
-  const tab2 = document.querySelector('.tabs__2');
-  const link1 = document.querySelector('.tabs__link-1');
-  tab1.style.display = "block";
-  tab2.style.display = "none";
-} */
+  links[1].onclick = function () {
+    links[1].classList.add("tabs__link-active", "tabs__head-line");
+    links[0].classList.remove("tabs__link-active", "tabs__head-line");
+    document.querySelector(".tabs__1").style.display = "none";
+    document.querySelector(".tabs__2").style.display = "block";
+  };
+}
 
 let block = document.querySelectorAll(".block");
 for (let i = 0; i < block.length; i++) {
@@ -153,14 +140,32 @@ for (let i = 0; i < block.length; i++) {
 let acc = document.getElementsByClassName("accordion");
 for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
     this.classList.toggle("accordion-anim");
-
     let panel = this.nextElementSibling;
+
     if (panel.style.display === "block") {
       panel.style.display = "none";
+
     } else {
       panel.style.display = "block";
-    }
+    };
+  
   });
-}
+} 
+
+document.querySelector(".sideM").onclick = function () {
+  const sideMenu = document.querySelector(".sideM");
+  const sideLine = document.querySelector(".sideM__line");
+  const aside = document.querySelector(".aside");
+  const asideClose = document.querySelector(".aside__close");
+  aside.classList.add("aside-show");
+  sideMenu.classList.remove("sideM-like");
+  sideLine.classList.remove("sideM__line-like");
+  sideMenu.classList.add("sideM-hide");
+  asideClose.onclick = () => {
+    sideMenu.classList.add("sideM-like");
+    sideLine.classList.add("sideM__line-like");
+    sideMenu.classList.remove("sideM-hide");
+    aside.classList.remove("aside-show");
+  };
+};
