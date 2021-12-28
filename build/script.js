@@ -1,5 +1,3 @@
-
-
 /* const tswiper = new Swiper(".swiper", {
   //grabCursor: true,
   initialSlide: 4,
@@ -145,13 +143,11 @@ for (let i = 0; i < acc.length; i++) {
 
     if (panel.style.display === "block") {
       panel.style.display = "none";
-
     } else {
       panel.style.display = "block";
-    };
-  
+    }
   });
-} 
+}
 
 document.querySelector(".sideM").onclick = function () {
   const sideMenu = document.querySelector(".sideM");
@@ -167,5 +163,16 @@ document.querySelector(".sideM").onclick = function () {
     sideLine.classList.add("sideM__line-like");
     sideMenu.classList.remove("sideM-hide");
     aside.classList.remove("aside-show");
+  };
+};
+
+document.querySelector(".menu-burgher").onclick = function () {
+  document
+    .querySelector(".navigation-mobile")
+    .classList.add("navigation-mobile-animation");
+  document.querySelector(".menu__close").onclick = function () {
+    document
+      .querySelector(".navigation-mobile")
+      .classList.remove("navigation-mobile-animation");
   };
 };

@@ -46,7 +46,6 @@
   .header-bottom {
     .wrapper {
       .info {
-        //display: flex;
         .row-flex();
         justify-content: space-between;
         align-items: center;
@@ -58,7 +57,8 @@
           .col();
           .size(8);
           .size-lg(10);
-          .size-sm(5);
+          .size-sm(6);
+          .size-xs(6);
           display: flex;
           justify-content: space-between;
         }
@@ -67,7 +67,18 @@
           .col();
           .size(4);
           .size-lg(2);
-          .size-sm(3);
+          .size-sm(5);
+          .size-xs(4);
+        }
+
+        .menu-burgher {
+          .col();
+          .size-sm(1);
+          .size-xs(1.5);
+          position: relative;
+          top: -8px;
+          display: none;
+          .sm(display, block);
         }
 
         &__address {
@@ -144,14 +155,7 @@
           font-size: 18px;
           font-weight: 500;
         }
-        .menu-burgher {
-          .col();
-          .size-sm(2);
-          position: relative;
-          top: -8px;
-          display: none;
-          .sm(display, block);
-        }
+
         .menu-burgher::before,
         .menu-burgher::after {
           content: "";
@@ -192,90 +196,163 @@
 }
 
 .navigation-mobile {
-  display: none;
-  .wrapper {
-    .menu {
-      &__head {
-        background: linear-gradient(
-          180deg,
-          rgba(1, 117, 80, 0.85) -15%,
-          #017550 119%
-        );
-        box-shadow: 0px 5px 15px rgba(8, 58, 42, 0.15);
-      }
-
-      &__list {
-        padding-left: 45px;
-        padding-top: 40px;
-      }
-      &__txt {
-        font-family: @osw;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 36px;
-        color: white;
-        padding: 16px 0px;
-        padding-left: 16px;
-      }
-
-      &__link:extend(.p) {
-        line-height: 19px;
-        text-decoration: none;
-      }
-
-      &__item {
-        padding-bottom: 20px;
-      }
+  position: fixed;
+  z-index: 90;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  //transform: scale(0);
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 0.5s;
+  animation: scale-exit 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    alternate-reverse both;
+  @keyframes scale-exit {
+    0% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
     }
-    .contacts {
-      padding-left: 60px;
-      padding-top: 50px;
-
-      &__phone {
-        position: relative;
-        margin-bottom: 40px;
-      }
-
-      &__number-1 {
-        margin-bottom: 15px;
-      }
-      &__phone::before {
-        content: url(/img/mob-phone.png);
-        position: absolute;
-        left: -35px;
-      }
-
-      &__adress {
-        position: relative;
-        margin-bottom: 40px;
-      }
-      &__adress::before {
-        content: url(/img/mob-adress.png);
-        position: absolute;
-        left: -35px;
-      }
-
-      &__email {
-        position: relative;
-      }
-
-      &__email::before {
-        content: url(/img/mob-chat.png);
-        position: absolute;
-        left: -35px;
-      }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
     }
-    .social {
-      display: flex;
+  }
+
+  .menu {
+    &__head {
+      background: linear-gradient(
+        180deg,
+        rgba(1, 117, 80, 0.85) -15%,
+        #017550 119%
+      );
+      box-shadow: 0px 5px 15px rgba(8, 58, 42, 0.15);
     }
-    .social__title {
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-family: @rob;
-      font-weight: 700;
+
+    &__close::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      transform: rotate(45deg);
+      right: 20px;
+      top: 35px;
+    }
+    &__close::before {
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      transform: rotate(-45deg);
+      right: 20px;
+      top: 35px;
+    }
+
+    &__list {
+      padding-left: 45px;
+      padding-top: 40px;
+    }
+
+    &__txt {
+      font-family: @osw;
+      font-weight: 500;
       font-size: 24px;
-      line-height: 28px;
-      color: @dark;
+      line-height: 36px;
+      color: white;
+      padding: 16px 0px;
+      padding-left: 16px;
+    }
+
+    &__link:extend(.p) {
+      line-height: 19px;
+      text-decoration: none;
+    }
+
+    &__item {
+      padding-bottom: 20px;
+    }
+  }
+  .contacts {
+    padding-left: 60px;
+    padding-top: 50px;
+
+    &__phone {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    &__number-1 {
+      margin-bottom: 15px;
+    }
+    &__phone::before {
+      content: url(/img/mob-phone.png);
+      position: absolute;
+      left: -35px;
+    }
+
+    &__adress {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    &__adress::before {
+      content: url(/img/mob-adress.png);
+      position: absolute;
+      left: -35px;
+    }
+
+    &__email {
+      position: relative;
+    }
+
+    &__email::before {
+      content: url(/img/mob-chat.png);
+      position: absolute;
+      left: -35px;
+    }
+  }
+  .social {
+    display: flex;
+  }
+
+  .social__title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: @rob;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: @dark;
+    margin-left: 15px;
+  }
+}
+
+.navigation-mobile-animation {
+  visibility: visible;
+  transition: 1.5s;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
     }
   }
 }
