@@ -136,44 +136,44 @@
         <span class="menu__close"></span>
       </div>
       <ul class="menu__list">
-        <li class="menu__item menu__item-1">
-          <a href="index.html" class="menu__link">Despre companie</a>
+        <li class="menu__item">
+          <a href="about-co.html" class="menu__link">Despre companie</a>
         </li>
-        <li class="menu__item menu__item-2">
-          <a href="page2.html" class="menu__link">De ce Capital Leasign</a>
+        <li class="menu__item">
+          <a href="about-co.html#c-leasing" class="menu__link">De ce Capital Leasign</a>
         </li>
-        <li class="menu__item menu__item-3">
-          <a href="page3.html" class="menu__link">Despre leasign</a>
+        <li class="menu__item">
+          <a href="about-leasing.html" class="menu__link">Despre leasign</a>
         </li>
-        <li class="menu__item menu__item-4">
-          <a href="page3-1.html" class="menu__link">Contacte</a>
+        <li class="menu__item">
+          <a href="contacts.html" class="menu__link">Contacte</a>
         </li>
-        <li class="menu__item menu__item-5">
-          <a href="page3-3.html" class="menu__link">Acte necesare</a>
+        <li class="menu__item">
+          <a href="documents.html" class="menu__link">Acte necesare</a>
         </li>
-        <li class="menu__item menu__item-6">
-          <a href="page3-2.html" class="menu__link">Parteneri</a>
+        <li class="menu__item">
+          <a href="partners.html" class="menu__link">Parteneri</a>
         </li>
-        <li class="menu__item menu__item-7">
-          <a href="page3-4.html" class="menu__link">Servicii</a>
+        <li class="menu__item">
+          <a href="services.html" class="menu__link">Servicii</a>
         </li>
-        <li class="menu__item menu__item-8">
-          <a href="about.html" class="menu__link">Calculatorul</a>
+        <li class="menu__item">
+          <a href="calc.html" class="menu__link">Calculatorul</a>
         </li>
-        <li class="menu__item menu__item-9">
-          <a href="contacts.html" class="menu__link">Noutati</a>
+        <li class="menu__item">
+          <a href="news.html" class="menu__link">Noutati</a>
         </li>
-        <li class="menu__item menu__item-10">
-          <a href="contacts.html" class="menu__link">Condintii pentru finantare</a>
+        <li class="menu__item">
+          <a href="conditions.html" class="menu__link">Condintii pentru finantare</a>
         </li>
-        <li class="menu__item menu__item-11">
-          <a href="contacts.html" class="menu__link">Rechizite bancare</a>
+        <li class="menu__item">
+          <a href="rechizite.html" class="menu__link">Rechizite bancare</a>
         </li>
-        <li class="menu__item menu__item-12">
-          <a href="contacts.html" class="menu__link">FAQ</a>
+        <li class="menu__item">
+          <a href="question.html" class="menu__link">FAQ</a>
         </li>
-        <li class="menu__item menu__item-13">
-          <a href="contacts.html" class="menu__link">Asigurare</a>
+        <li class="menu__item">
+          <a href="asurance.html" class="menu__link">Asigurare</a>
         </li>
       </ul>
     </div>
@@ -613,7 +613,7 @@
 
     <div class="container-contacts">
       <div class="items__wrapp">
-        <form class="form" id="form-contact">
+        <form class="form" id="form-contact" action='sendmail.php' method="POST">
           <p class="form__intro">Contactați-ne</p>
           <h2 class="form__title">Lasa un mesaj</h2>
           <div class="input-wrapp input-wrapp-1">
@@ -661,8 +661,6 @@
           width="100%" height="865" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-
-
   </section>
   <footer class="footer">
     <div class="wrapper">
@@ -767,6 +765,69 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    let mySwiper = new Swiper(".my-swiper", {
+      grabCursor: true,
+      slidesPerView: 4,
+      slidesPerGroup: 6,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          grid: {
+            rows: 1,
+            fill: "row",
+          },
+        },
+        450: {
+          slidesPerView: 2,
+          slidesPerGroup: 6,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+          spaceBetween: 20,
+        },
+        700: {
+          slidesPerView: 2,
+          slidesPerGroup: 6,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+          spaceBetween: 20,
+        },
+        800: {
+          slidesPerView: 3,
+          slidesPerGroup: 6,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+        1000: {
+          slidesPerView: 4,
+          slidesPerGroup: 6,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+      },
+    });
+  </script>
   <script src="validation.js"></script>
   <script src="script.js"></script>
 </body>

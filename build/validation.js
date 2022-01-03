@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }
 
   function formValidate(formContact) {
-    console.log('msssss')
-
     let error = 0;
 
     let RequiredFields = document.querySelectorAll(".required");
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
           errorSurname.classList.remove("error__message-show");
           addSucces(inputReq);
         }
-      }  else if (inputReq.classList.contains("input__phone")) {
+      } else if (inputReq.classList.contains("input__phone")) {
         let errorPhone = document.querySelector(".error__message-phone");
         if (phoneValidate(inputReq)) {
           addError(inputReq);
@@ -51,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
           errorPhone.classList.remove("error__message-show");
           addSucces(inputReq);
         }
-      }  else if (inputReq.classList.contains("input__email")) {
+      } else if (inputReq.classList.contains("input__email")) {
         let errorEmail = document.querySelector(".error__message-email");
         if (emailValidate(inputReq)) {
           addError(inputReq);
@@ -66,17 +64,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
           addSucces(inputReq);
         }
       } else if (inputReq.classList.contains("input__checkbox-1")) {
-        function check() { 
+        function check() {
           let check = document.querySelector(".input__checkbox-1 ");
           if (check.checked === true) {
             return true;
           } else {
             return false;
           }
-        } 
-        let errorCheckBox = document.querySelector(".error__message-box-1"); 
+        }
+        let errorCheckBox = document.querySelector(".error__message-box-1");
         let cheked = check();
-        console.log(cheked);
         if (!(cheked === true)) {
           errorCheckBox.classList.add("error__message-show");
           errorCheckBox.innerHTML = "Politica de confidențialitate";
@@ -90,15 +87,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
           addSucces(inputReq);
         }
       } else if (inputReq.classList.contains("input__checkbox-2")) {
-        function check() { 
+        function check() {
           let check = document.querySelector(".input__checkbox-2 ");
           if (check.checked === true) {
             return true;
           } else {
             return false;
           }
-        } 
-        let errorCheckBox = document.querySelector(".error__message-box-2"); 
+        }
+        let errorCheckBox = document.querySelector(".error__message-box-2");
         let cheked = check();
         if (!(cheked === true)) {
           console.log("if");

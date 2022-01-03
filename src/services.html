@@ -99,7 +99,7 @@
       <div class="wrapper">
         <div class="info">
           <div class="info__logo">
-            <a href="index.html"></a><img src="/img/logo.png" alt="logo">
+            <a href="index.html"><img src="/img/logo.png" alt="logo"></a>
           </div>
           <div class="info__cont">
             <p class="info__currency">20.28 mdl</p>
@@ -137,43 +137,43 @@
       </div>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="index.html" class="menu__link">Despre companie</a>
+          <a href="about-co.html" class="menu__link">Despre companie</a>
         </li>
         <li class="menu__item">
-          <a href="page2.html" class="menu__link">De ce Capital Leasign</a>
+          <a href="about-co.html#c-leasing" class="menu__link">De ce Capital Leasign</a>
         </li>
         <li class="menu__item">
-          <a href="page3.html" class="menu__link">Despre leasign</a>
+          <a href="about-leasing.html" class="menu__link">Despre leasign</a>
         </li>
         <li class="menu__item">
-          <a href="page3-1.html" class="menu__link">Contacte</a>
+          <a href="contacts.html" class="menu__link">Contacte</a>
         </li>
         <li class="menu__item">
-          <a href="page3-3.html" class="menu__link">Acte necesare</a>
+          <a href="documents.html" class="menu__link">Acte necesare</a>
         </li>
         <li class="menu__item">
-          <a href="page3-2.html" class="menu__link">Parteneri</a>
+          <a href="partners.html" class="menu__link">Parteneri</a>
         </li>
         <li class="menu__item">
-          <a href="page3-4.html" class="menu__link">Servicii</a>
+          <a href="services.html" class="menu__link">Servicii</a>
         </li>
         <li class="menu__item">
-          <a href="about.html" class="menu__link">Calculatorul</a>
+          <a href="calc.html" class="menu__link">Calculatorul</a>
         </li>
         <li class="menu__item">
-          <a href="contacts.html" class="menu__link">Noutati</a>
+          <a href="news.html" class="menu__link">Noutati</a>
         </li>
         <li class="menu__item">
-          <a href="contacts.html" class="menu__link">Condintii pentru finantare</a>
+          <a href="conditions.html" class="menu__link">Condintii pentru finantare</a>
         </li>
         <li class="menu__item">
-          <a href="contacts.html" class="menu__link">Rechizite bancare</a>
+          <a href="rechizite.html" class="menu__link">Rechizite bancare</a>
         </li>
         <li class="menu__item">
-          <a href="contacts.html" class="menu__link">FAQ</a>
+          <a href="question.html" class="menu__link">FAQ</a>
         </li>
         <li class="menu__item">
-          <a href="contacts.html" class="menu__link">Asigurare</a>
+          <a href="asurance.html" class="menu__link">Asigurare</a>
         </li>
       </ul>
     </div>
@@ -328,20 +328,25 @@
     <div class="wrapper">
       <p class="contact__intro">Contactați-ne</p>
       <h2 class="contact__title">Lasa un mesaj</h2>
-      <form class="form">
+      <form class="form" id="form-contact" action='sendmail.php' method="POST">
         <div class="fields">
           <div class="input-wrapp input-wrapp-1">
-            <label for="name" class="label label__name">Nume,Prenume</label>
-            <input type="text" id="name" name="Name" class="input input__name" placeholder="Lupu Andrei">
+            <label for="name" class="label label__name">Nume, Prenume</label>
+            <input type="text" id="name" name="Name" class="input input__name required" placeholder="Lupu Andrei">
           </div>
+          <p class="error__message error__message-name">Error message</p>
           <div class="input-wrapp">
             <label for="name" class="label label__email">Email</label>
-            <input type="text" id="email" name="Email" class="input input__email" placeholder="andrei@gmail.com">
+            <input type="text" id="email" name="Email" class="input input__email required"
+              placeholder="andrei@gmail.com">
           </div>
+          <p class="error__message error__message-email">Error message</p>
           <div class="input-wrapp input-wrapp-3">
             <label for="contact" class="label label__phone">Număr de contact</label>
-            <input type="text" id="contact" name="Phone Number" class="input input__phone" placeholder="065243678">
+            <input type="text" id="contact" name="Phone Number" class="input input__phone required"
+              placeholder="065243678">
           </div>
+          <p class="error__message error__message-phone">Error message</p>
         </div>
         <div class="coments">
           <div class="input-wrapp">
@@ -350,14 +355,16 @@
           </div>
           <div class="form__checkbox">
             <div class="checkbox-1">
-              <input type="checkbox" class="input__checkbox" id="policy">
+              <input type="checkbox" class="input__checkbox input__checkbox-1 required" id="policy">
               <label for="policy" class="label__checkbox">Sunt de acord cu Politica de confidențialitate</label>
             </div>
+            <p class="error__message error__message-box-1">Error message</p>
             <div class="checkbox-2">
-              <input type="checkbox" class="input__checkbox" id="pers-date">
+              <input type="checkbox" class="input__checkbox input__checkbox-2 required" id="pers-date">
               <label for="pers-date" class="label__checkbox">Permit prelucrarea datelor personale de Capital
                 Leasing</label>
             </div>
+            <p class="error__message error__message-box-2">Error message</p>
           </div>
         </div>
         <button type="submit" class="form__submit">Trimite</button>
@@ -467,6 +474,31 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    let swiperService = new Swiper(".service-swipp", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 480px
+        850: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  </script>
+  <script src="validation.js"></script>
   <script src="script.js"></script>
 </body>
 
