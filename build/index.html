@@ -26,6 +26,9 @@
           <a href="index.html" class="aside__link">Principala</a>
         </li>
         <li class="aside__item">
+          <a href="about-co.html" class="aside__link">Despre companie</a>
+        </li>
+        <li class="aside__item">
           <a href="about-leasing.html" class="aside__link">Despre leasign</a>
         </li>
         <li class="aside__item">
@@ -208,14 +211,52 @@
       <div class="wrapper__items">
         <div class="intro">
           <h1 class="intro__title">
-            Loren ipsum
+            Companie de leasing
           </h1>
-          <h3 class="intro__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Fusce nisi, id pellentesque tortor ullamcorper
-            feugiat massa et.
-          </h3>
-          <button class="intro__btn">Detalii</button>
+          <div class="swiper swiper__main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="intro__subtitle">
+                  «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+                  procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+                </h3>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="intro__subtitle">
+                  «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+                  procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+                </h3>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="intro__subtitle">
+                  «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+                  procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+                </h3>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="intro__subtitle">
+                  «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+                  procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+                </h3>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="intro__subtitle">
+                  «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+                  procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+                </h3>
+              </div>
+            </div>
+
+            <div class="swiper-pagination">
+            </div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+          <!-- <h3 class="intro__subtitle">
+            «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de finanțare pentru
+            procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de bunuri.
+          </h3> -->
+          <!--  <button class="intro__btn">Detalii</button> -->
         </div>
         <div class="main__img">
           <img src="/img/main-section-img.png" alt="mazda">
@@ -228,7 +269,7 @@
           </div>
           <p class="advantage__text advantage__text-width">
             <span class="advantage__text-green">25 ani</span>
-            experienta pe piata
+            experiență pe piață
           </p>
         </div>
         <div class="advantage advantage-padding">
@@ -245,8 +286,8 @@
             <img src="/img/advantage-icon.png" alt="">
           </div>
           <p class="advantage__text advantage__text-width">
-            <span class="advantage__text-green">20 angajati</span>
-            experti in domeniu
+            <span class="advantage__text-green">20 angajați</span>
+            experți în domeniu
           </p>
         </div>
       </div>
@@ -266,14 +307,13 @@
             O.C.N. Capital Leasing S.R.L.
           </h2>
           <p class="about__message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Fusce nisi, id pellentesque tortor ullamcorper feugiat
-            massa et. Massa nec, vivamus sed sem pretium.
+            «O.C.N. Capital Leasing S.R.L.» - este o companie de leasing, care oferă servicii de
+            finanțare pentru procurarea in leasing a automobilelor noi, automobilelor rulate și a altor tipuri de
+            bunuri.
           </p>
           <p class="about__message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Fusce nisi, id pellentesque tortor ullamcorper feugiat
-            massa et. Massa nec, vivamus sed sem pretium.
+            Noi oferim cele mai atractive soluții financiare,condiții avantajoase,diverse programe a leasingului auto și
+            altor bunuri, indiferent de sectorul industrial care aparține locatarului.
           </p>
           <button class="about__btn">Detalii</button>
           <div class="about__bg">
@@ -376,6 +416,272 @@
           <div class="inputs">
             <div class="input input-1">
               <label for="price" class="label label__price">Pret</label>
+              <img src="/img/calc/euro.png" alt="" class="price-img">
+              <input type="number" name="Price" id="price" class="input__price" value="10000" step="100" min="5000"
+                max="250000">
+            </div>
+            <input type="range" class="inp range__price" min="5000" max="250000" value="10000" step="100">
+            <div class="input input-2">
+              <div class="inp-wrapp">
+                <label for="adv" class="label label__advance">Avans</label>
+                <img src="/img/calc/euro.png" alt="" class="advance-img">
+                <input type="number" name="Advance" id="adv" class="input__advance" value="2000" step="100">
+              </div>
+              <div class="inp-wrapp-2">
+                <img src="/img/calc/percent.png" alt="" class="percent-img">
+                <input type="number" name="percent" class="input__percent" value="20">
+              </div>
+            </div>
+            <input type="range" class="inp range__advance" value="2000" step="100" min="2000" max="8000">
+            <div class="input input-3">
+              <label for="period" class="label label__period">Termen</label>
+              <img src="/img/calc/period.png" alt="" class="period-img">
+              <input type="number" name="Date" id="period" class="input__period" value="12" min="12" max="60">
+              <span class="span__period">luni</span>
+            </div>
+            <input type="range" class="inp range__period" min="12" max="60" value="12">
+          </div>
+          <button class="form__btn">Vezi graficul</button>
+        </form>
+        <div class="outputs">
+          <div class="output output-1">
+            <p class="output__text">
+              Rata de leasing lunară de la:
+            </p>
+            <p class="output__text output__text-green">
+              699.61 EUR
+            </p>
+          </div>
+          <div class="output output-2">
+            <p class="output__text output__text-3">
+              Rata dobânzii: <span class="output__text-b rata-dob">9.00%</span>
+            </p>
+            <p class="output__text output__text-4">
+              DAE: <span class="output__text-b dae">~14.66%</span>
+            </p>
+            <p class="output__text output__text-5">
+              Avans: <span class="output__text-b output-advance">2000.00 EUR</span>
+            </p>
+          </div>
+          <div class="output output-3">
+            <p class="output__text output__text-6">
+              Termen: <span class="output__text-b output-period">12 luni</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="table table__index">
+    <div class="wrapper">
+      <div class="table-1">
+        <h2 class="table-1__title">Prima Rata</h2>
+        <table class="first-table">
+          <thead>
+            <tr>
+              <th class="table-head">Aportul inițial </th>
+              <th class="table-head">CASCO (primul an)</th>
+              <th class="table-head">Dobînda (unică)</th>
+              <th class="table-head">Total spre plată</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="initial">3 660.00</td>
+              <td id="casco">240.00</td>
+              <td id="dobindaU">150.00</td>
+              <td id="total">4 050.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-2">
+        <h2 class="table-2__title">Grafic de plăți lunare</h2>
+        <table class="second-table">
+          <thead>
+            <tr>
+              <th class="table-head first-line">Rata</th>
+              <th class="table-head">Valoarea de răscumpărare</th>
+              <th class="table-head">Principal</th>
+              <th class="table-head table-head-2">Dobânda</th>
+              <th class="table-head table-head-2">Rata de leasing</th>
+            </tr>
+          </thead>
+          <tbody id="tableData">
+            <tr>
+              <td class="first-line">01</td>
+              <td>2 340.00</td>
+              <td>63.63</td>
+              <td>63.63</td>
+              <td>63.63</td>
+            </tr>
+            <tr>
+              <td class="first-line">02</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">03</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">04</td>
+              <td>2 340.00</td>
+              <td>64.91</td>
+              <td>64.91</td>
+              <td>64.91</td>
+            </tr>
+            <tr>
+              <td class="first-line">05</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">06</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">07</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">08</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">09</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">10</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">11</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">12</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">13</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">14</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">15</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">16</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">17</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">18</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">19</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">20</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">21</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td class="first-line">22</td>
+              <td>2 340.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="first-line"></td>
+              <td>7 000.00</td>
+              <td>636.55</td>
+              <td>10 636.55</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!--   <section class="calc">
+    <div class="wrapper">
+      <div class="wrapp__items">
+        <form class="form">
+          <h2 class="form__title">Calculator</h2>
+          <div class="inputs">
+            <div class="input input-1">
+              <label for="price" class="label label__price">Pret</label>
               <img src="/img/price-inp.png" alt="" class="price-img">
               <input type="text" name="Price" id="price" class="input__price">
             </div>
@@ -432,7 +738,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--  <section class="testim">
     <p class="testim__intro">
       Recenzii
@@ -610,7 +916,6 @@
     </div>
   </section>
   <section class="contact-section">
-
     <div class="container-contacts">
       <div class="items__wrapp">
         <form class="form" id="form-contact" action='sendmail.php' method="POST">
@@ -622,7 +927,7 @@
           </div>
           <p class="error__message error__message-name">Error message</p>
           <div class="input-wrapp">
-            <label for="name" class="label label__email">Email</label>
+            <label for="name" class="label label__email">E-mail</label>
             <input type="text" id="email" name="Email" class="input input__email required"
               placeholder="andrei@gmail.com">
           </div>
@@ -638,7 +943,6 @@
             <textarea name="Coments" id="message" cols="30" rows="10" class="input__textarea "></textarea>
           </div>
           <div class="form__bottom">
-            <button type="submit" class="form__submit">Trimite</button>
             <div class="form__checkbox">
               <div class="checkbox-1">
                 <input type="checkbox" class="input__checkbox input__checkbox-1 required" id="policy">
@@ -652,13 +956,14 @@
               </div>
               <p class="error__message error__message-box-2">Error message</p>
             </div>
+            <button type="submit" class="form__submit">Trimite</button>
           </div>
         </form>
       </div>
       <div class="map">
         <iframe class="map-frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73588.6549757534!2d28.782997818986303!3d47.024050370635415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d937ebbb855%3A0x24ce7db26c720acb!2sStrada%20Calea%20Ie%C5%9Filor%2010%2C%20Chi%C8%99in%C4%83u%202069%2C%20Moldova!5e0!3m2!1sro!2s!4v1640077770311!5m2!1sro!2s"
-          width="100%" height="865" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="100%" height="910" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -753,10 +1058,10 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="copyright">Copyright © 2015-2019 O.C.N. Capital Leasing S.R.L.</p>
+        <p class="copyright">Copyright © 2015-2022 O.C.N. Capital Leasing S.R.L.</p>
         <div class="made-by">
           <span class="made">Elaborat de</span>
-          <img src="/img/itsystem.png" alt="">
+          <a href="https://itsystem.md/" target="_blank"><img src="/img/itsystem.png" alt=""></a>
         </div>
         <a href="policy.html" class="policy-link">
           <p class="policy">Politica de confidențialitatea</p>
@@ -765,6 +1070,26 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script>
+    let swiperMain = new Swiper(".swiper__main", {
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        renderBullet: function (index, bulletnumbers) {
+          return '<span class="' + bulletnumbers + '">' + (index + 1) + '</span>';
+        },
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
   <script>
     let mySwiper = new Swiper(".my-swiper", {
       grabCursor: true,
@@ -828,7 +1153,10 @@
       },
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.5.0/dist/formula.min.js"></script>
   <script src="validation.js"></script>
+  <script src="calcIndex.js"></script>
   <script src="script.js"></script>
 </body>
 

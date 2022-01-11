@@ -24,18 +24,70 @@
 
 .intro {
   &__title {
-    font-family: @osw;
+    font-family: @rob;
     font-size: 65px;
-    font-weight: 700;
-    line-height: 78px;
+    font-weight: 500;
+    line-height: 76px;
     color: @dark;
-    text-transform: uppercase;
-    max-width: 200px;
+    //text-transform: uppercase;
+    max-width: 300px !important;
     .xs-block({
       font-size: 36px;
       line-height: 43px;
     });
   }
+
+  .swiper-wrapper{
+    max-width: 420px;
+    padding-bottom: 30px;
+  }
+  .swiper-button-next:after{
+    content: url(/img/slide-next.png);
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    left: 0;
+    width: fit-content;
+
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #01734E !important;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    top: -20px;
+    margin-right: 20px !important;
+    background: transparent !important;
+  }
+  .swiper-pagination-bullet::after {
+    content: "" !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 5px !important;
+    background-color: #017550 !important;
+    position: absolute !important;
+    top: 25px;
+    left: -2px;
+  }
+  .swiper-pagination-bullet::before {
+    content: "" !important;
+    width: 24px !important;
+    height: 1px !important;
+    background-color: #017550; 
+    opacity: 0.5;
+    position: absolute !important;
+    top: 29px;
+    left: 8px;
+  }
+
+  .swiper-button-next{
+    position: absolute;
+    left: 170px;
+    top: 205px;
+  }
+  
 
   // .intro__subtitle
 
@@ -694,12 +746,13 @@
 
       .form {
         .col();
-        .size(8);
+        .size(7.8);
         .md-block({
           .size(12);
         });
 
         &__title:extend(.h2) {
+          text-transform: uppercase;
           padding-left: 39px;
           padding-top: 54px;
           padding-bottom: 45px;
@@ -890,7 +943,7 @@
 
       .outputs {
         .col();
-        .size(3);
+        .size(3.2);
         margin-top: 12%;
         margin-right: 3%;
         .xs-block({
@@ -1086,9 +1139,10 @@
       });
 
     .items__wrapp {
-      max-width: 644px;
+      max-width: 600px;
       .col();
       .size(6);
+      margin-right: 44px;
       .sm-block({
           .size(12);
             order: 2;
@@ -1192,6 +1246,9 @@
           }
 
           .form__checkbox {
+            order: 3;
+            margin-right: 10px;
+
             .xl-block({
                 order: 0;
                 margin-bottom: 15px
