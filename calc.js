@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let avancePercent = document.querySelector(".input__percent");
   //let avancePercentValue = document.querySelector(".input__percent").value;
   let period = document.querySelector(".input__period");
+  //let timeCredit = +period.value;
 
   document.querySelector(".form").addEventListener("input" , function () {
     /* Ratele dobinzii*/
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /* *********** */
 
     if((periodValue >= 12 && periodValue <= 24) && (avancePercent.value >= 26 && avancePercent.value <= 30)){
+      console.log(typeof(avancePercent.value));
       averagePercent = +8.50;
       document.querySelector(".rata-dob").innerHTML = averagePercent.toFixed(2) + "%";
     } else if((periodValue >= 25 && periodValue <= 36) && (avancePercent.value >= 26 && avancePercent.value <= 30)){
@@ -94,13 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let rataAnuala;
     let rataLunaraLeasing; 
     function calculateRate () {
-      rataAnuala = averagePercent / 100 / 12;
+      rataAnuala = averagePercent / 100 / periodValue;
       let ii = rataAnuala + 1;
       let powerii = Math.pow(ii, periodValue);
       let poweri = powerii - 1;
       let powerres = (rataAnuala / poweri) + rataAnuala;
       let result = (price.value - avance.value) * powerres;
       rataLunaraLeasing = +result.toFixed(2);
+      console.log(rataLunaraLeasing); 
       document.querySelector(".output__text-green").innerHTML = rataLunaraLeasing + " EUR";
     }
     
@@ -109,8 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
     /* DOBANDA */
 
     function calcDobAndVal () { 
-  
+      //let creditValoarea = [];
+      //let creditRate = [];
+      //let creditPrincipal = [];
+      //console.log(creditValoarea);
       let creditData = [];
+      //document.getElementById("tableData").innerHTML = creditData.rata;
+      //console.log(creditData);
        
       let newVal = +price.value,
       
@@ -122,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             initialValue = priceWithoutAvance.toFixed(2),
             principal,
             leasing;
+            //console.log(priceWithoutAvance);
 
         function calcDobanda () {
 
@@ -130,12 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
             ratesD = priceWithoutAvance * rataAnuala;
 
             principal = rataLunaraLeasing - ratesD;
+            //console.log(typeof(rataLunaraLeasing));
+            //console.log(typeof(ratesD));
 
             priceWithoutAvance = (priceWithoutAvance - rataLunaraLeasing) + ratesD;
             valoarea = priceWithoutAvance;
+            //ratesD = valoarea * rataAnuala;
+            //rata = newPeriod;
             rata = i;
-  
+            //rata.sort();
+            //console.log(priceWithoutAvance);
+            //creditValoarea.push(valoarea + "<br>");
+            //creditRate.push(ratesD);
             leasing = +rataLunaraLeasing;
+            //console.log(valoarea);
 
 
             rateObject = {
@@ -168,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         calcDobanda();
-
           /* Prepare DATA for dae formula */
 
         let creditSum = newVal - avance.value;  /*  suma finantarii */
@@ -185,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         let total = +avance.value + cascoPercent + dobUnic;
         let avanceTab1 = +avance.value;
+        //console.log(dobUnic);
 
         /* First table data insert to page */
         document.querySelector(".dae").innerHTML =  '~' + resultdae.toFixed(2) + '%';
@@ -192,6 +209,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('casco').innerHTML = cascoPercent.toFixed(2);
         document.getElementById('dobindaU').innerHTML = dobUnic.toFixed(2);
         document.getElementById('total').innerHTML = total;
+
+
+
 
        /*  function calcValoarea () {
           for(let i = ratesD; newPeriod > 0; newPeriod--) {
@@ -204,7 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     calcDobAndVal();
+
     
+
     /* =========== */
     price.oninput = function () {
       let priceValue = this.value;
@@ -224,7 +246,16 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (price.value > 250000) {
           price.value = 250000;
         }
-      }  
+      } 
+     /*  let priceValue;
+      let maxPriceValue = Math.round(price.value * 80 / 100);
+      let minPriceValue = Math.ceil(price.value * 20 / 100);
+      console.log(minPriceValue);
+      document.querySelector(".range__advance").max = maxPriceValue;
+      document.querySelector(".range__advance").min = minPriceValue;
+      price.value = priceValue;
+      avance.value = minPriceValue; 
+      document.querySelector(".output-advance").innerHTML = avance.value + ".00" + " EUR";  */  
      
     document.querySelector(".range__price").oninput = function (){
       let priceValue = this.value;
@@ -257,7 +288,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let priceValue = +price.value;
       let minmaxPercentValue = Math.round(avanceValue / priceValue * 100);
       avancePercent.value = minmaxPercentValue; 
-     
+     /*  if(minmaxPercentValue < 20) {
+        avance.value = price.value * 20 / 100;
+      } else if(minmaxPercentValue > 80) {
+        avance.value = price.value * 80 / 100;
+      } */
       document.querySelector(".output-advance").innerHTML = avance.value + ".00" + " EUR"; 
     } 
    

@@ -241,7 +241,7 @@
                 <input type="number" name="percent" class="input__percent" value="20">
               </div>
             </div>
-            <input type="range" class="inp range__advance" value="2000" step="100" min="1000" max="50000">
+            <input type="range" class="inp range__advance" value="2000" step="100" min="2000" max="8000">
             <div class="input input-3">
               <label for="period" class="label label__period">Termen</label>
               <img src="/img/calc/period.png" alt="" class="period-img">
@@ -257,23 +257,23 @@
               Rata de leasing lunară de la:
             </p>
             <p class="output__text output__text-green">
-              79.23 EUR
+              699.61 EUR
             </p>
           </div>
           <div class="output output-2">
             <p class="output__text output__text-3">
-              Rata dobânzii: <span class="output__text-b rata-dob">8.00%</span>
+              Rata dobânzii: <span class="output__text-b rata-dob">9.00%</span>
             </p>
             <p class="output__text output__text-4">
-              DAE: <span class="output__text-b">13.73%</span>
+              DAE: <span class="output__text-b dae">~14.66%</span>
             </p>
             <p class="output__text output__text-5">
-              Avans: <span class="output__text-b output-advance">3660.00 EUR</span>
+              Avans: <span class="output__text-b output-advance">2000.00 EUR</span>
             </p>
           </div>
           <div class="output output-3">
             <p class="output__text output__text-6">
-              Termen: <span class="output__text-b output-period">22 luni</span>
+              Termen: <span class="output__text-b output-period">12 luni</span>
             </p>
           </div>
         </div>
@@ -350,10 +350,10 @@
           </thead>
           <tbody>
             <tr>
-              <td>3 660.00</td>
-              <td>240.00</td>
-              <td>150.00</td>
-              <td>4 050.00</td>
+              <td id="initial">3 660.00</td>
+              <td id="casco">240.00</td>
+              <td id="dobindaU">150.00</td>
+              <td id="total">4 050.00</td>
             </tr>
           </tbody>
         </table>
@@ -580,7 +580,7 @@
               <th class="table-head table-head-2">Rata de leasing</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tableData">
             <tr>
               <td class="first-line">01</td>
               <td>2 340.00</td>
@@ -747,6 +747,21 @@
       </div>
     </div>
   </section>
+  <!-- <div class="table-out"></div> -->
+  <!-- <table>
+    <thead>
+      <tr>
+        <th>rata</th>
+        <th>valoare</th>
+        <th>principal</th>
+        <th>dobinda</th>
+        <th>leasing</th>
+      </tr>
+    </thead>
+    <tbody id="tableData">
+
+    </tbody>
+  </table> -->
   <section class="contact">
     <div class="wrapper">
       <p class="contact__intro">Contactați-ne</p>
@@ -896,6 +911,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.5.0/dist/formula.min.js"></script>
   <script src="validation.js"></script>
   <script src="script.js"></script>
   <script src="calc.js"></script>
